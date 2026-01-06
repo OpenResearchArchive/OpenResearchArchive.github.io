@@ -1,252 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<style>
-  /* --- CORE STYLING --- */
-  body {
-    font-family: "Charter", "Bitstream Charter", "Sitka Text", "Cambria", "Georgia", serif;
-    background-color: #f8fafc; /* Slightly lighter, cleaner grey */
-    background-image: radial-gradient(#cbd5e0 0.5px, transparent 0.5px); /* Subtle dot grid pattern */
-    background-size: 30px 30px;
-    color: #2d3748;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    line-height: 1.8;
-    -webkit-font-smoothing: antialiased;
-  }
+body {
+  /* Using a modern system serif stack for better readability */
+  font-family: "Charter", "Bitstream Charter", "Sitka Text", "Georgia", serif;
+  background-color: #f0f2f5; /* Slightly cooler grey */
+  color: #334155; /* Softened black for less eye strain */
+  max-width: 800px; /* Narrower line length is easier to read */
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
 
-  /* --- DECORATIVE ACCENTS --- */
-  .accent-bar {
-    height: 8px;
-    width: 100px;
-    background: #1a365d;
-    margin-bottom: 2rem;
-    border-radius: 4px;
-  }
+h1, h2, h3 {
+  color: #0f172a;
+  margin-top: 1.5em;
+  letter-spacing: -0.02em;
+}
 
-  /* --- NAVIGATION --- */
-  nav {
-    margin-bottom: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-  }
+nav {
+  margin-bottom: 50px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 10px;
+  font-family: system-ui, -apple-system, sans-serif; /* Clean sans-serif for nav */
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
 
-  .nav-brand {
-    font-size: 1.1rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #1a365d;
-    text-transform: uppercase;
-  }
+a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease; /* Smooth hover effect */
+}
 
-  .nav-links a {
-    margin-left: 30px;
-    font-weight: 600;
-    color: #4a5568;
-    text-decoration: none;
-    font-family: system-ui, sans-serif;
-    font-size: 0.9rem;
-  }
+a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
 
-  /* --- HERO / PROFILE SECTION --- */
-  .hero-container {
-    display: grid;
-    grid-template-columns: 1fr 200px; /* Space for a profile image/box */
-    gap: 40px;
-    align-items: center;
-    margin-bottom: 80px;
-  }
-
-  .hero-text h1 {
-    font-size: 3rem;
-    color: #1a365d;
-    margin: 0 0 20px 0;
-    line-height: 1.1;
-  }
-
-  /* Decorative box for where a photo would go */
-  .profile-box {
-    width: 200px;
-    height: 250px;
-    background: #e2e8f0;
-    border-radius: 12px;
-    border: 2px solid #1a365d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-shadow: 15px 15px 0px #1a365d10; /* Offset shadow design */
-  }
-
-  .profile-box::after {
-    content: "PHOTO";
-    color: #a0aec0;
-    font-family: system-ui;
-    font-weight: bold;
-  }
-
-  /* --- SECTION HEADERS --- */
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 40px;
-  }
-
-  .section-header h2 {
-    margin: 0;
-    white-space: nowrap;
-  }
-
-  .section-line {
-    height: 1px;
-    background: #e2e8f0;
-    width: 100%;
-  }
-
-  /* --- THE PAPER CARDS --- */
-  .paper {
-    background: #ffffff;
-    padding: 40px;
-    margin-bottom: 40px;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-
-  /* Subtle corner accent on hover */
-  .paper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: transparent;
-    transition: background 0.3s ease;
-  }
-
-  .paper:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-    border-color: #1a365d;
-  }
-
-  .paper:hover::before {
-    background: #1a365d;
-  }
-
-  .paper-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #1a365d;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .badge {
-    display: inline-block;
-    padding: 4px 12px;
-    background: #f1f5f9;
-    color: #475569;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 20px;
-    font-family: system-ui, sans-serif;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 25px;
-    font-family: system-ui, sans-serif;
-    font-weight: 700;
-    color: #1a365d;
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
-
-  .btn::after {
-    content: "→";
-    transition: transform 0.2s ease;
-  }
-
-  .btn:hover::after {
-    transform: translateX(5px);
-  }
-
-  /* --- FOOTER --- */
-  footer {
-    padding: 100px 0 40px;
-    text-align: center;
-    font-family: system-ui;
-    font-size: 0.8rem;
-    color: #94a3b8;
-  }
-
-  /* Responsive Fix for mobile */
-  @media (max-width: 768px) {
-    .hero-container { grid-template-columns: 1fr; text-align: center; }
-    .profile-box { margin: 0 auto; }
-    .nav-links { display: none; } /* Simplify for mobile */
-  }
-</style>
-</head>
-<body>
-
-  <nav>
-    <div class="nav-brand">DESIGN.PORTFOLIO</div>
-    <div class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <main>
-    <div class="hero-container">
-      <div class="hero-text">
-        <div class="accent-bar"></div>
-        <h1>Curating digital & physical experiences.</h1>
-        <p>I am a researcher and designer focused on the intersection of human behavior and built environments. Currently exploring how space influences productivity.</p>
-      </div>
-      <div class="profile-box">
-        </div>
-    </div>
-
-    <div class="section-header" id="work">
-      <h2>Recent Projects</h2>
-      <div class="section-line"></div>
-    </div>
-
-    <div class="paper">
-      <span class="badge">Case Study</span>
-      <span class="paper-title">The Psychology of Shared Workspaces</span>
-      <p>A comprehensive deep-dive into how open-office floor plans affect cognitive load and employee retention over a 24-month period.</p>
-      <a href="#" class="btn">View Full Project</a>
-    </div>
-
-    <div class="paper">
-      <span class="badge">Publication</span>
-      <span class="paper-title">Sustainable Urban Materiality</span>
-      <p>Investigating the thermal properties of recycled polymers in low-cost housing developments across tropical climates.</p>
-      <a href="#" class="btn">Read Publication</a>
-    </div>
-
-  </main>
-
-  <footer>
-    &copy; 2026 • DESIGNED BY HAND
-  </footer>
-
-</body>
-</html>
+.paper {
+  background: #ffffff;
+  padding: 35px;
+  margin-bottom: 30px;
+  border-radius: 8px; /* Rounded corners look more modern */
+  border-left: 4px solid #1a365d;
+  /* Subtle shadow adds depth without looking heavy */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
