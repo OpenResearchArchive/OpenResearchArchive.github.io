@@ -217,4 +217,18 @@ body {
   border-color: #5fa8b5;
 }
 
+/* Search bar */
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  margin: 12px 0 18px 0;
+  border-radius: 8px;
+  border: 1.5px solid #c5d6dc;
+  font-size: 15px;
+  outline: none;
+}
 
+.search-bar:focus {
+  border-color: #5fa8b5;
+}
