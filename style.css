@@ -232,3 +232,65 @@ body {
 .search-bar:focus {
   border-color: #5fa8b5;
 }
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Explore button */
+.dropbtn {
+  background-color: #1f2a38;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 240px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 100;
+}
+
+/* Category buttons (Economics / Physics) */
+.category-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #1f2a38;
+}
+
+.category-btn:hover {
+  background-color: #f2f2f2;
+}
+
+/* Subcategory container */
+.subcategory {
+  display: none;
+  padding-left: 12px;
+  background-color: #fafafa;
+}
+
+/* Subcategory links */
+.subcategory a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #1f2a38;
+  font-size: 14px;
+}
+
+.subcategory a:hover {
+  background-color: #eaeaea;
+}
