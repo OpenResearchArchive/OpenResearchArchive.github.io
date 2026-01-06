@@ -58,7 +58,7 @@ a:hover {
 .pill-button {
     display: inline-block;
     padding: 10px 24px;
-    border: 1.5px solid #8abfb2; /* The teal color from your image */
+    border: 1.5px solid #2563eb; /* The teal color from your image */
     border-radius: 50px;         /* This creates the rounded "pill" ends */
     text-decoration: none !important; /* Removes the underline */
     color: #8abfb2 !important;   /* Matches text color to border */
@@ -88,7 +88,7 @@ a:hover {
     margin: 5px;                /* Space between the buttons */
     border: 2px solid #8abfb2;  /* The teal 'circle' border */
     border-radius: 50px;        /* This makes the corners perfectly round */
-    color: #8abfb2;             /* Matches the text color to the border */
+    color: #2563eb;             /* Matches the text color to the border */
     text-decoration: none;      /* Removes the default underline */
     font-weight: bold;
     transition: 0.3s;           /* Makes the hover effect smooth */
