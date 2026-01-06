@@ -61,7 +61,7 @@ a:hover {
     border: 1.5px solid #2563eb; /* The teal color from your image */
     border-radius: 50px;         /* This creates the rounded "pill" ends */
     text-decoration: none !important; /* Removes the underline */
-    color: #8abfb2 !important;   /* Matches text color to border */
+    color: #2563eb !important;   /* Matches text color to border */
     font-family: system-ui, sans-serif;
     font-size: 1.1rem;
     transition: all 0.2s ease;   /* Smooth hover transition */
@@ -86,7 +86,7 @@ a:hover {
     display: inline-block;
     padding: 8px 20px;          /* Vertical and horizontal space inside the circle */
     margin: 5px;                /* Space between the buttons */
-    border: 2px solid #8abfb2;  /* The teal 'circle' border */
+    border: 2px solid #2563eb;  /* The teal 'circle' border */
     border-radius: 50px;        /* This makes the corners perfectly round */
     color: #2563eb;             /* Matches the text color to the border */
     text-decoration: none;      /* Removes the default underline */
@@ -96,7 +96,7 @@ a:hover {
 
 /* Optional: Make it change color when you hover over it */
 .topic-link:hover {
-    background-color: #8abfb2;
+    background-color: #2563eb;
     color: white;
 }
 
