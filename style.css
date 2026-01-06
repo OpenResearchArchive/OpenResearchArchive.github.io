@@ -81,3 +81,28 @@ a:hover {
     text-transform: uppercase;
     margin-bottom: 8px;
 }
+/* This targets only the links with the 'topic-link' class */
+.topic-link {
+    display: inline-block;
+    padding: 8px 20px;          /* Vertical and horizontal space inside the circle */
+    margin: 5px;                /* Space between the buttons */
+    border: 2px solid #8abfb2;  /* The teal 'circle' border */
+    border-radius: 50px;        /* This makes the corners perfectly round */
+    color: #8abfb2;             /* Matches the text color to the border */
+    text-decoration: none;      /* Removes the default underline */
+    font-weight: bold;
+    transition: 0.3s;           /* Makes the hover effect smooth */
+}
+
+/* Optional: Make it change color when you hover over it */
+.topic-link:hover {
+    background-color: #8abfb2;
+    color: white;
+}
+
+/* Remove the bullet points from the list */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
