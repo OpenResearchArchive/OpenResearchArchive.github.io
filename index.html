@@ -5,80 +5,77 @@
   <title>Student Research Journal</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo">Student Research Journal</div>
 
-  <div class="dropdown">
-    <button class="dropbtn" id="exploreBtn">Explore ▾</button>
+  <div class="nav-right">
+    <input type="text" id="searchInput" placeholder="Search papers...">
 
-    <div class="dropdown-content" id="exploreMenu">
+    <div class="dropdown">
+      <button id="exploreBtn">Explore ▾</button>
+      <div class="dropdown-content" id="exploreMenu">
 
-      <!-- Economics -->
-      <button class="subject-btn">Economics ▸</button>
-      <div class="content-types">
-        <a href="economics-research.html">Research Papers</a>
-        <a href="economics-olevel.html">O-Level Notes</a>
-        <a href="economics-alevel.html">A-Level Notes</a>
+        <div class="dropdown-group">
+          <strong>Economics</strong>
+          <a href="#">Research Papers</a>
+          <a href="#">O-Level Notes</a>
+          <a href="#">A-Level Notes</a>
+        </div>
+
+        <div class="dropdown-group">
+          <strong>Physics</strong>
+          <a href="#">Research Papers</a>
+          <a href="#">O-Level Notes</a>
+          <a href="#">A-Level Notes</a>
+        </div>
+
       </div>
-
-      <!-- Physics -->
-      <button class="subject-btn">Physics ▸</button>
-      <div class="content-types">
-        <a href="physics-research.html">Research Papers</a>
-        <a href="physics-olevel.html">O-Level Notes</a>
-        <a href="physics-alevel.html">A-Level Notes</a>
-      </div>
-
     </div>
+
+    <a class="submit-btn" href="submit.html">Submit Article</a>
   </div>
 </nav>
 
-<main>
+<!-- HERO -->
+<header class="hero">
   <h1>Student Research Journal</h1>
-  <p>
-    An independent, open-access student journal publishing research papers
-    and academic notes across multiple disciplines.
-  </p>
-</main>
+  <p>An open-access platform for student research and academic notes.</p>
+</header>
 
-<!-- JAVASCRIPT -->
-<script>
-const exploreBtn = document.getElementById("exploreBtn");
-const exploreMenu = document.getElementById("exploreMenu");
+<!-- SUBJECT PILLS -->
+<section class="subjects">
+  <span class="pill">Economics</span>
+  <span class="pill">Physics</span>
+  <span class="pill">Mathematics</span>
+  <span class="pill">Computer Science</span>
+</section>
 
-// Open / close Explore
-exploreBtn.addEventListener("click", function (e) {
-  e.stopPropagation();
-  exploreMenu.style.display =
-    exploreMenu.style.display === "block" ? "none" : "block";
-});
+<!-- PAPERS -->
+<section class="papers" id="paperList">
 
-// Close when clicking outside
-document.addEventListener("click", function () {
-  exploreMenu.style.display = "none";
-  document.querySelectorAll(".content-types").forEach(ct => {
-    ct.style.display = "none";
-  });
-});
+  <div class="paper-card">
+    <h3>Inflation Trends in Pakistan</h3>
+    <p class="subject">Economics</p>
+    <p class="author">By Student Author</p>
+  </div>
 
-// Toggle subject sections
-document.querySelectorAll(".subject-btn").forEach(btn => {
-  btn.addEventListener("click", function (e) {
-    e.stopPropagation();
-    const section = this.nextElementSibling;
+  <div class="paper-card">
+    <h3>Quantum Tunneling Explained</h3>
+    <p class="subject">Physics</p>
+    <p class="author">By Student Author</p>
+  </div>
 
-    document.querySelectorAll(".content-types").forEach(ct => {
-      if (ct !== section) ct.style.display = "none";
-    });
+  <div class="paper-card">
+    <h3>Applications of Derivatives</h3>
+    <p class="subject">Mathematics</p>
+    <p class="author">By Student Author</p>
+  </div>
 
-    section.style.display =
-      section.style.display === "block" ? "none" : "block";
-  });
-});
-</script>
+</section>
 
+<script src="script.js"></script>
 </body>
 </html>
