@@ -1,60 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
- <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Submit Article</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-  <a href="index.html">Home</a> |
-  <a href="economics.html">Economics</a> |
-  <a href="physics.html">Physics</a> |
-  <a href="history.html">History</a> |
-  <a href="submit.html">Submit</a> |
-  <a href="about.html">About</a>
-</nav>
-<h1>Submission Guidelines</h1>
-  
-<ul>
-  <li>Open to students worldwide</li>
-  <li>Original work only</li>
-  <li>PDF format</li>
-  <li>Proper citations required</li>
-  <li>Plagiarism not accepted</li>
-  <li> 1.Formatting Requirements:</li>
-<li>1.1 Font Style:
-The primary text must be in Times New Roman or EB Garamond. Footnotes and citations
-will follow the same font requirements.</li>
-<li>1.2 Font Size:
-The main body of the essay must be in 12 pt font, footnotes in 10 pt, and the essay title must
-be in 15 pt and bold.</li>
-<li>1.3 Spacing:
-The entire essay must have 1.5 line spacing, while block quotations and footnotes must be
-single-spaced.</li>
-<li>1.4 Text Style: 
-The text must be fully justified, each paragraph must begin with a first-line
-indent of 0.5", and headings or subheadings may be used as long as they remain consistent
-throughout the essay.</li>
-<li>1.5 Page Layout: 
-The essay must be typed on A4-sized pages with 1-inch margins on all sides,
-and page numbers must appear at the bottom center.</li>
-<li>2.Use of Sources</li>
-<li>2.1 Citation Rules: 
-All statistics, quotations, historical claims, case studies, or policy references
-must be properly cited.</li>
-<li>2.2 Visual Data Requirements: 
-Any graphs, charts, or data visuals included must contain a
-clear title, a source citation below the visual, and the year of data collection.</li>
-<li>2.3 Citation Style: 
-Participants may use Harvard, APA, or Chicago (footnotes) citation styles
-but must remain consistent throughout the essay.</li>
-<li>2.4 Plagiarism Policy: 
-Plagiarism exceeding 10% (excluding references) will result in automatic
-disqualification.</li>
-</ul>
 
-<p>
-<b>Fill out the following form for research submission https://forms.gle/ggpQ6udFGWVcbkmMA </b>
-<p><a href="index.html">Back to Home</a></p>
+<nav class="navbar">
+  <div class="logo">Student Research Journal</div>
+  <a class="submit-btn" href="index.html">Home</a>
+</nav>
+
+<section class="hero">
+  <h1>Submit Your Article</h1>
+  <p>Submit original student research or academic notes.</p>
+</section>
+
+<section class="papers">
+  <form class="paper-card">
+    <label>Title</label>
+    <input type="text" required>
+
+    <label>Author Name</label>
+    <input type="text" required>
+
+    <label>Subject</label>
+    <select>
+      <option>Economics</option>
+      <option>Physics</option>
+      <option>Mathematics</option>
+    </select>
+
+    <label>Abstract</label>
+    <textarea rows="5"></textarea>
+
+    <button class="submit-btn" type="submit">Submit</button>
+  </form>
+</section>
 
 </body>
 </html>
