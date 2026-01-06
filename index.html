@@ -8,7 +8,6 @@
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo">Student Research Journal</div>
 
@@ -18,100 +17,65 @@
     <div class="dropdown-content" id="exploreMenu">
 
       <!-- Economics -->
-      <button class="category-btn">Economics ▸</button>
-      <div class="subcategory">
-        <a href="research.html">Research Papers</a>
-        <a href="olevel.html">O Level Notes</a>
+      <button class="subject-btn">Economics ▸</button>
+      <div class="content-types">
+        <a href="economics-research.html">Research Papers</a>
+        <a href="economics-olevel.html">O-Level Notes</a>
+        <a href="economics-alevel.html">A-Level Notes</a>
       </div>
 
       <!-- Physics -->
-      <button class="category-btn">Physics ▸</button>
-      <div class="subcategory">
-        <a href="research.html">Research Papers</a>
-        <a href="olevel.html">O Level Notes</a>
+      <button class="subject-btn">Physics ▸</button>
+      <div class="content-types">
+        <a href="physics-research.html">Research Papers</a>
+        <a href="physics-olevel.html">O-Level Notes</a>
+        <a href="physics-alevel.html">A-Level Notes</a>
       </div>
 
     </div>
   </div>
 </nav>
 
-<!-- MAIN CONTENT -->
 <main>
   <h1>Student Research Journal</h1>
-
-  <p class="intro">
-    An independent, open-access student journal publishing research,
-    essays, and policy papers across multiple disciplines.
+  <p>
+    An independent, open-access student journal publishing research papers
+    and academic notes across multiple disciplines.
   </p>
-
-  <h2>Subjects</h2>
-
-  <!-- SEARCH BAR -->
-  <input
-    type="text"
-    id="searchInput"
-    class="search-bar"
-    placeholder="Search subjects..."
-  >
-
-  <!-- SUBJECT PILLS -->
-  <ul class="subject-list" id="subjectList">
-    <li><a href="economics.html" class="subject-pill">Economics</a></li>
-    <li><a href="physics.html" class="subject-pill">Physics</a></li>
-    <li><a href="history.html" class="subject-pill">History</a></li>
-  </ul>
-
-  <h2>For Authors</h2>
-  <p><a href="submit.html">Submission Guidelines</a></p>
-
-  <h2>About</h2>
-  <p><a href="about.html">About the Journal</a></p>
 </main>
 
-<!-- JAVASCRIPT (MUST BE AT BOTTOM) -->
+<!-- JAVASCRIPT -->
 <script>
-/* ===== DROPDOWN LOGIC ===== */
 const exploreBtn = document.getElementById("exploreBtn");
 const exploreMenu = document.getElementById("exploreMenu");
 
+// Open / close Explore
 exploreBtn.addEventListener("click", function (e) {
   e.stopPropagation();
   exploreMenu.style.display =
     exploreMenu.style.display === "block" ? "none" : "block";
 });
 
-// Close dropdown when clicking outside
+// Close when clicking outside
 document.addEventListener("click", function () {
   exploreMenu.style.display = "none";
-  document.querySelectorAll(".subcategory").forEach(sub => {
-    sub.style.display = "none";
+  document.querySelectorAll(".content-types").forEach(ct => {
+    ct.style.display = "none";
   });
 });
 
-// Toggle category submenus
-document.querySelectorAll(".category-btn").forEach(btn => {
+// Toggle subject sections
+document.querySelectorAll(".subject-btn").forEach(btn => {
   btn.addEventListener("click", function (e) {
     e.stopPropagation();
-    const sub = this.nextElementSibling;
+    const section = this.nextElementSibling;
 
-    document.querySelectorAll(".subcategory").forEach(s => {
-      if (s !== sub) s.style.display = "none";
+    document.querySelectorAll(".content-types").forEach(ct => {
+      if (ct !== section) ct.style.display = "none";
     });
 
-    sub.style.display = sub.style.display === "block" ? "none" : "block";
-  });
-});
-
-/* ===== SEARCH BAR ===== */
-const searchInput = document.getElementById("searchInput");
-const subjects = document.querySelectorAll("#subjectList li");
-
-searchInput.addEventListener("keyup", function () {
-  const filter = searchInput.value.toLowerCase();
-
-  subjects.forEach(item => {
-    const text = item.textContent.toLowerCase();
-    item.style.display = text.includes(filter) ? "block" : "none";
+    section.style.display =
+      section.style.display === "block" ? "none" : "block";
   });
 });
 </script>
