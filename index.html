@@ -18,9 +18,66 @@ searchInput.addEventListener("keyup", function () {
   });
 });
 </script>
+  <script>
+const exploreBtn = document.getElementById("exploreBtn");
+const exploreMenu = document.getElementById("exploreMenu");
+
+// Open / close main dropdown
+exploreBtn.addEventListener("click", function (e) {
+  e.stopPropagation();
+  exploreMenu.style.display =
+    exploreMenu.style.display === "block" ? "none" : "block";
+});
+
+// Close when clicking outside
+document.addEventListener("click", function () {
+  exploreMenu.style.display = "none";
+  document.querySelectorAll(".subcategory").forEach(sub => {
+    sub.style.display = "none";
+  });
+});
+
+// Toggle categories
+document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    const sub = this.nextElementSibling;
+
+    // Close other subcategories
+    document.querySelectorAll(".subcategory").forEach(s => {
+      if (s !== sub) s.style.display = "none";
+    });
+
+    // Toggle clicked one
+    sub.style.display = sub.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
 <body>
 
 <nav class="navbar">
+  <div class="dropdown">
+  <button class="dropbtn" id="exploreBtn">Explore ▾</button>
+
+  <div class="dropdown-content" id="exploreMenu">
+
+    <!-- Economics -->
+    <button class="category-btn">Economics ▸</button>
+    <div class="subcategory">
+      <a href="inequality.html">Income Inequality</a>
+      <a href="growth.html">Economic Growth</a>
+    </div>
+
+    <!-- Physics -->
+    <button class="category-btn">Physics ▸</button>
+    <div class="subcategory">
+      <a href="quantum.html">Quantum Mechanics</a>
+      <a href="astro.html">Astrophysics</a>
+    </div>
+
+  </div>
+</div>
   <div class="logo">Student Research Journal</div>
 
   <div class="dropdown">
