@@ -1,161 +1,31 @@
+/* GENERAL */
 body {
-  /* Using a modern system serif stack for better readability */
-  font-family: "Charter", "Bitstream Charter", "Sitka Text", "Georgia", serif;
-  background-color: #f0f2f5; /* Slightly cooler grey */
-  color: #334155; /* Softened black for less eye strain */
-  max-width: 800px; /* Narrower line length is easier to read */
-  margin: 40px auto;
-  padding: 0 20px;
-  line-height: 1.8;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3 {
-  color: #0f172a;
-  margin-top: 1.5em;
-  letter-spacing: -0.02em;
-}
-
-nav {
-  margin-bottom: 50px;
-  border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 10px;
-  font-family: system-ui, -apple-system, sans-serif; /* Clean sans-serif for nav */
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-a {
-  color: #2563eb;
-  text-decoration: none;
-  transition: color 0.2s ease; /* Smooth hover effect */
-}
-
-a:hover {
-  color: #1d4ed8;
-  text-decoration: underline;
-}
-
-.paper {
-  background: #ffffff;
-  padding: 35px;
-  margin-bottom: 30px;
-  border-radius: 8px; /* Rounded corners look more modern */
-  border-left: 4px solid #1a365d;
-  /* Subtle shadow adds depth without looking heavy */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-/* The container uses Flexbox to align buttons and handle spacing */
-.subject-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows buttons to move to next line if screen is narrow */
-    gap: 12px;      /* Modern way to set space between buttons */
-    margin-top: 20px;
-}
-
-/* Creating the pill shape and teal outline */
-.pill-button {
-    display: inline-block;
-    padding: 10px 24px;
-    border: 1.5px solid #2563eb; /* The teal color from your image */
-    border-radius: 50px;         /* This creates the rounded "pill" ends */
-    text-decoration: none !important; /* Removes the underline */
-    color: #2563eb !important;   /* Matches text color to border */
-    font-family: system-ui, sans-serif;
-    font-size: 1.1rem;
-    transition: all 0.2s ease;   /* Smooth hover transition */
-}
-
-/* Hover state: fills the button with color when mouse is over it */
-.pill-button:hover {
-    background-color: #8abfb2;
-    color: white !important;
-}
-
-/* Styling for the small uppercase header */
-.topic-header {
-    color: #777;
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-}
-/* This targets only the links with the 'topic-link' class */
-.topic-link {
-    display: inline-block;
-    padding: 8px 20px;          /* Vertical and horizontal space inside the circle */
-    margin: 5px;                /* Space between the buttons */
-    border: 2px solid #2563eb;  /* The teal 'circle' border */
-    border-radius: 50px;        /* This makes the corners perfectly round */
-    color: #2563eb;             /* Matches the text color to the border */
-    text-decoration: none;      /* Removes the default underline */
-    font-weight: bold;
-    transition: 0.3s;           /* Makes the hover effect smooth */
-}
-
-/* Optional: Make it change color when you hover over it */
-.topic-link:hover {
-    background-color: #2563eb;
-    color: white;
-}
-
-/* Remove the bullet points from the list */
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-/* Dropdown menu */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-button {
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 180px;
-  border: 1px solid #ddd;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px;
-  color: #1a365d;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-}
-body {
+  font-family: Georgia, serif;
   margin: 0;
-  font-family: "Georgia", serif;
+  background-color: #f6f7f8;
+  color: #1f2a38;
 }
 
+main {
+  padding: 20px;
+}
+
+/* NAVBAR */
 .navbar {
+  background-color: #1f2a38;
+  padding: 14px 20px;
   display: flex;
   align-items: center;
-  background-color: #1f2a38;
-  padding: 12px 20px;
+  gap: 20px;
 }
 
 .logo {
   color: white;
   font-size: 20px;
   font-weight: bold;
-  margin-right: 30px;
 }
 
+/* DROPDOWN */
 .dropdown {
   position: relative;
 }
@@ -163,134 +33,52 @@ body {
 .dropbtn {
   background-color: #1f2a38;
   color: white;
-  font-size: 16px;
   border: none;
+  font-size: 16px;
   cursor: pointer;
-  padding: 10px;
 }
 
+/* MENU */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
-  min-width: 220px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  border-radius: 6px;
-  z-index: 10;
-}
-
-.dropdown-content a {
-  color: #1f2a38;
-  padding: 10px 14px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #f2f2f2;
-}
-/* Subject pills */
-.subject-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-}
-
-.subject-list li {
-  margin: 10px 0;
-}
-
-.subject-pill {
-  display: inline-block;
-  padding: 8px 16px;
-  border: 1.5px solid #9bbfc7;
-  border-radius: 999px;
-  text-decoration: none;
-  color: #1f5f73;
-  font-size: 14px;
-  background-color: #f9fcfd;
-  transition: all 0.2s ease;
-}
-
-.subject-pill:hover {
-  background-color: #e6f2f5;
-  border-color: #5fa8b5;
-}
-
-/* Search bar */
-.search-bar {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px 14px;
-  margin: 12px 0 18px 0;
-  border-radius: 8px;
-  border: 1.5px solid #c5d6dc;
-  font-size: 15px;
-  outline: none;
-}
-
-.search-bar:focus {
-  border-color: #5fa8b5;
-}
-/* Dropdown container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Explore button */
-.dropbtn {
-  background-color: #1f2a38;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-/* Dropdown menu */
-.dropdown-content {
-  display: none;
-  position: absolute;
+  top: 40px;
   background: white;
-  min-width: 240px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  min-width: 260px;
   border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   z-index: 100;
 }
 
-/* Category buttons (Economics / Physics) */
-.category-btn {
+/* SUBJECT BUTTONS */
+.subject-btn {
   width: 100%;
   background: none;
   border: none;
   text-align: left;
-  padding: 12px 14px;
+  padding: 12px 16px;
   font-size: 15px;
   cursor: pointer;
-  color: #1f2a38;
 }
 
-.category-btn:hover {
+.subject-btn:hover {
   background-color: #f2f2f2;
 }
 
-/* Subcategory container */
-.subcategory {
+/* CONTENT TYPES */
+.content-types {
   display: none;
-  padding-left: 12px;
   background-color: #fafafa;
 }
 
-/* Subcategory links */
-.subcategory a {
+.content-types a {
   display: block;
-  padding: 10px 14px;
+  padding: 10px 24px;
+  font-size: 14px;
   text-decoration: none;
   color: #1f2a38;
-  font-size: 14px;
 }
 
-.subcategory a:hover {
+.content-types a:hover {
   background-color: #eaeaea;
 }
