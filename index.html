@@ -1,145 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Student Research Journal</title>
   <meta charset="UTF-8">
+  <title>Student Research Journal</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<script>
-const searchInput = document.getElementById("searchInput");
-const subjects = document.querySelectorAll("#subjectList li");
 
-searchInput.addEventListener("keyup", function () {
-  const filter = searchInput.value.toLowerCase();
-
-  subjects.forEach(item => {
-    const text = item.textContent.toLowerCase();
-    item.style.display = text.includes(filter) ? "block" : "none";
-  });
-});
-</script>
-  <script>
-const exploreBtn = document.getElementById("exploreBtn");
-const exploreMenu = document.getElementById("exploreMenu");
-
-// Open / close main dropdown
-exploreBtn.addEventListener("click", function (e) {
-  e.stopPropagation();
-  exploreMenu.style.display =
-    exploreMenu.style.display === "block" ? "none" : "block";
-});
-
-// Close when clicking outside
-document.addEventListener("click", function () {
-  exploreMenu.style.display = "none";
-  document.querySelectorAll(".subcategory").forEach(sub => {
-    sub.style.display = "none";
-  });
-});
-
-// Toggle categories
-document.querySelectorAll(".category-btn").forEach(btn => {
-  btn.addEventListener("click", function (e) {
-    e.stopPropagation();
-
-    const sub = this.nextElementSibling;
-
-    // Close other subcategories
-    document.querySelectorAll(".subcategory").forEach(s => {
-      if (s !== sub) s.style.display = "none";
-    });
-
-    // Toggle clicked one
-    sub.style.display = sub.style.display === "block" ? "none" : "block";
-  });
-});
-</script>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
-  <div class="dropdown">
-  <button class="dropbtn" id="exploreBtn">Explore ▾</button>
-
-  <div class="dropdown-content" id="exploreMenu">
-
-    <!-- Economics -->
-    <button class="category-btn">Economics ▸</button>
-    <div class="subcategory">
-      <a href="inequality.html">Income Inequality</a>
-      <a href="growth.html">Economic Growth</a>
-    </div>
-
-    <!-- Physics -->
-    <button class="category-btn">Physics ▸</button>
-    <div class="subcategory">
-      <a href="quantum.html">Quantum Mechanics</a>
-      <a href="astro.html">Astrophysics</a>
-    </div>
-
-  </div>
-</div>
   <div class="logo">Student Research Journal</div>
 
   <div class="dropdown">
     <button class="dropbtn" id="exploreBtn">Explore ▾</button>
 
     <div class="dropdown-content" id="exploreMenu">
-      <div class="submenu">
-        <span>Economics ▸</span>
-        <div class="submenu-content">
-          <a href="#">Research Papers</a>
-          <a href="#">O level Notes</a>
-        </div>
+
+      <!-- Economics -->
+      <button class="category-btn">Economics ▸</button>
+      <div class="subcategory">
+        <a href="inequality.html">Income Inequality</a>
+        <a href="growth.html">Economic Growth</a>
       </div>
 
-      <div class="submenu">
-        <span>Politics ▸</span>
-        <div class="submenu-content">
-          <a href="#">Research Papers</a>
-          <a href="#">O Level Notes</a>
-        </div>
+      <!-- Physics -->
+      <button class="category-btn">Physics ▸</button>
+      <div class="subcategory">
+        <a href="quantum.html">Quantum Mechanics</a>
+        <a href="astro.html">Astrophysics</a>
       </div>
+
     </div>
   </div>
 </nav>
 
-<h1>Student Research Journal</h1>
+<!-- MAIN CONTENT -->
+<main>
+  <h1>Student Research Journal</h1>
 
-<p>
-An independent, open-access student journal publishing research,
-essays, and policy papers across multiple disciplines.
-</p>
+  <p class="intro">
+    An independent, open-access student journal publishing research,
+    essays, and policy papers across multiple disciplines.
+  </p>
 
-<h2 class="section-title">Visit Topic Pages</h2>
-<ul>
-<h2>Subjects:</h2>
-<input
-  type="text"
-  id="searchInput"
-  placeholder="Search subjects or papers..."
-  class="search-bar"
->
-<h2 class="section-title">Visit Topic Pages</h2>
+  <h2>Subjects</h2>
 
-<ul class="subject-list">
-  <li><a href="economics.html" class="subject-pill">Economics</a></li>
-  <li><a href="physics.html" class="subject-pill">Physics</a></li>
-  <li><a href="history.html" class="subject-pill">History</a></li>
-</ul>
-</ul>
+  <!-- SEARCH BAR -->
+  <input
+    type="text"
+    id="searchInput"
+    class="search-bar"
+    placeholder="Search subjects..."
+  >
 
-<h2>For Authors</h2>
-<p><a href="submit.html">Submission Guidelines</a></p>
+  <!-- SUBJECT PILLS -->
+  <ul class="subject-list" id="subjectList">
+    <li><a href="economics.html" class="subject-pill">Economics</a></li>
+    <li><a href="physics.html" class="subject-pill">Physics</a></li>
+    <li><a href="history.html" class="subject-pill">History</a></li>
+  </ul>
 
-<h2>About</h2>
-<p><a href="about.html">About the Journal</a></p>
+  <h2>For Authors</h2>
+  <p><a href="submit.html">Submission Guidelines</a></p>
 
-<!-- ✅ JAVASCRIPT MUST BE HERE -->
+  <h2>About</h2>
+  <p><a href="about.html">About the Journal</a></p>
+</main>
+
+<!-- JAVASCRIPT (MUST BE AT BOTTOM) -->
 <script>
+/* ===== DROPDOWN LOGIC ===== */
 const exploreBtn = document.getElementById("exploreBtn");
 const exploreMenu = document.getElementById("exploreMenu");
 
-// Toggle main dropdown
 exploreBtn.addEventListener("click", function (e) {
   e.stopPropagation();
   exploreMenu.style.display =
@@ -149,15 +83,35 @@ exploreBtn.addEventListener("click", function (e) {
 // Close dropdown when clicking outside
 document.addEventListener("click", function () {
   exploreMenu.style.display = "none";
+  document.querySelectorAll(".subcategory").forEach(sub => {
+    sub.style.display = "none";
+  });
 });
 
-// Toggle submenus
-document.querySelectorAll(".submenu span").forEach(item => {
-  item.addEventListener("click", function (e) {
+// Toggle category submenus
+document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", function (e) {
     e.stopPropagation();
-    const submenu = this.nextElementSibling;
-    submenu.style.display =
-      submenu.style.display === "block" ? "none" : "block";
+    const sub = this.nextElementSibling;
+
+    document.querySelectorAll(".subcategory").forEach(s => {
+      if (s !== sub) s.style.display = "none";
+    });
+
+    sub.style.display = sub.style.display === "block" ? "none" : "block";
+  });
+});
+
+/* ===== SEARCH BAR ===== */
+const searchInput = document.getElementById("searchInput");
+const subjects = document.querySelectorAll("#subjectList li");
+
+searchInput.addEventListener("keyup", function () {
+  const filter = searchInput.value.toLowerCase();
+
+  subjects.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    item.style.display = text.includes(filter) ? "block" : "none";
   });
 });
 </script>
