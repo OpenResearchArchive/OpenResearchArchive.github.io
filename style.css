@@ -46,3 +46,38 @@ a:hover {
   /* Subtle shadow adds depth without looking heavy */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+/* The container uses Flexbox to align buttons and handle spacing */
+.subject-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to move to next line if screen is narrow */
+    gap: 12px;      /* Modern way to set space between buttons */
+    margin-top: 20px;
+}
+
+/* Creating the pill shape and teal outline */
+.pill-button {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 1.5px solid #8abfb2; /* The teal color from your image */
+    border-radius: 50px;         /* This creates the rounded "pill" ends */
+    text-decoration: none !important; /* Removes the underline */
+    color: #8abfb2 !important;   /* Matches text color to border */
+    font-family: system-ui, sans-serif;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;   /* Smooth hover transition */
+}
+
+/* Hover state: fills the button with color when mouse is over it */
+.pill-button:hover {
+    background-color: #8abfb2;
+    color: white !important;
+}
+
+/* Styling for the small uppercase header */
+.topic-header {
+    color: #777;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
