@@ -1,12 +1,11 @@
 /* =========================
    COLOR THEME
 ========================= */
-}
 :root {
   --maroon: #6b1020;
   --maroon-dark: #4a0b15;
 
-  --blue: #1e3a8a;        /* dark academic blue */
+  --blue: #1e3a8a;
   --blue-soft: #60a5fa;
 
   --black: #0f0f0f;
@@ -48,12 +47,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  flex-wrap: nowrap;
-  overflow: visible;
 }
 
-/* LOGO — PURE WHITE */
+/* LOGO */
 .logo,
 .logo span {
   color: white;
@@ -91,7 +87,7 @@ body {
 }
 
 /* =========================
-   DROPDOWN (FIXED)
+   DROPDOWN
 ========================= */
 .dropdown {
   position: relative;
@@ -276,28 +272,50 @@ body {
 }
 
 /* =========================
-   PAPERS
+   PAPERS / CONTENT GRID
 ========================= */
-.papers {
+.content-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 40px;
+  padding: 40px 20px;
 }
 
-.paper-card {
-  background: var(--white);
-  padding: 22px;
+.content-card {
+  text-decoration: none;
+  color: var(--text-main);
+  border: 1px solid #ddd;
   border-radius: 14px;
-  border: 1px solid #eee;
+  padding: 22px;
+  background: var(--white);
+
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
-.paper-card h3 {
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  border-color: var(--blue);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--blue);
+}
+
+.content-card h3 {
+  margin: 0 0 10px;
   color: var(--maroon-dark);
 }
 
-.subject {
-  font-size: 13px;
+.content-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: var(--text-muted);
 }
 
@@ -383,48 +401,3 @@ body {
     height: 220px;
   }
 }
-.content-grid {
-  display: grid;
-  /* Creates 3 columns if space allows, otherwise wraps */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.content-card {
-  text-decoration: none;
-  color: #333;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-}
-
-/* Hover effects for better UX */
-.content-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  border-color: #007bff;
-}
-
-.icon {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.content-card h3 {
-  margin: 0 0 10px 0;
-  color: #0056b3;
-}
-
-.content-card p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #666;
-}
-
