@@ -1,18 +1,42 @@
-/* GLOBAL */
-body {
-  margin: 0;
-  font-family: Georgia, serif;
-  background: #f5f6f8;
-  color: #222;
+/* =========================
+   COLOR THEME (BURGUNDY)
+========================= */
+:root {
+  --primary: #7b1e3a;        /* Burgundy */
+  --primary-dark: #5a152b;
+  --primary-soft: #a63a5f;
+
+  --bg-light: #f5f6f8;
+  --bg-white: #ffffff;
+
+  --text-dark: #222;
+  --text-muted: #555;
+  --text-light: #f9fafb;
 }
 
-/* NAVBAR */
+/* =========================
+   GLOBAL
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: #1e2a38;
+  background: var(--primary-dark);
   color: white;
 }
 
@@ -28,12 +52,15 @@ body {
 }
 
 #searchInput {
-  padding: 7px;
-  border-radius: 5px;
+  padding: 7px 10px;
+  border-radius: 6px;
   border: none;
+  width: 180px;
 }
 
-/* DROPDOWN */
+/* =========================
+   DROPDOWN
+========================= */
 .dropdown {
   position: relative;
 }
@@ -54,7 +81,7 @@ body {
   right: 0;
   padding: 15px;
   width: 200px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .dropdown-group {
@@ -64,23 +91,31 @@ body {
 .dropdown-content a {
   display: block;
   text-decoration: none;
-  color: #333;
-  margin: 5px 0;
+  color: var(--text-dark);
+  margin: 6px 0;
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
 .submit-btn {
   color: white;
   text-decoration: none;
-  background: #3b82f6;
-  padding: 7px 12px;
-  border-radius: 5px;
+  background: var(--primary);
+  padding: 7px 14px;
+  border-radius: 6px;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
   text-align: center;
   padding: 60px 20px 20px;
+}
+
+.hero h1 {
+  color: var(--primary-dark);
 }
 
 .hero-img {
@@ -93,7 +128,9 @@ body {
   border-radius: 14px;
 }
 
-/* SUBJECT CARDS (HOMEPAGE) */
+/* =========================
+   SUBJECT CARDS
+========================= */
 .subjects {
   display: flex;
   justify-content: center;
@@ -104,7 +141,7 @@ body {
 
 .subject-card {
   text-decoration: none;
-  color: #1e2a38;
+  color: var(--primary-dark);
   text-align: center;
 }
 
@@ -113,8 +150,7 @@ body {
   height: 95px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
 }
 
 .subject-card:hover img {
@@ -127,7 +163,9 @@ body {
   font-weight: 600;
 }
 
-/* PAPER CARDS */
+/* =========================
+   PAPER CARDS
+========================= */
 .papers {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -136,118 +174,26 @@ body {
 }
 
 .paper-card {
-  background: white;
+  background: var(--bg-white);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
 .paper-card h3 {
   margin-top: 0;
+  color: var(--primary-dark);
 }
 
 .subject {
   font-size: 13px;
-  color: #555;
+  color: var(--text-muted);
 }
 
-/* SUBJECT PAGE CONTENT GRID */
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  padding: 40px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.content-card {
-  background: white;
-  border-radius: 12px;
-  padding: 30px 25px;
-  text-decoration: none;
-  color: #1e2a38;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.content-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
-}
-
-.content-card h3 {
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-
-.content-card p {
-  font-size: 14px;
-  color: #555;
-}
-
-/* NEWSLETTER POPUP */
-.newsletter-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.newsletter-popup {
-  background: white;
-  padding: 35px;
-  border-radius: 12px;
-  max-width: 400px;
-  width: 90%;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-}
-
-.newsletter-popup h2 {
-  margin-top: 0;
-}
-
-.newsletter-popup p {
-  font-size: 14px;
-  color: #555;
-}
-
-.newsletter-popup input {
-  width: 100%;
-  padding: 10px;
-  margin: 15px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.newsletter-popup button {
-  background: #3b82f6;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  background: none;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-}
+/* =========================
+   WHY IT WORKS
+========================= */
 .why-it-works {
-  background: #0f172a;
+  background: var(--primary-dark);
   color: white;
   padding: 70px 20px;
   text-align: center;
@@ -267,15 +213,14 @@ body {
 }
 
 .why-card {
-  background: #111827;
+  background: #2a0f18;
   padding: 30px;
   border-radius: 16px;
   text-align: left;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 .why-number {
-  background: #3b82f6;
+  background: var(--primary);
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -286,13 +231,8 @@ body {
   margin-bottom: 15px;
 }
 
-.why-card h3 {
-  margin: 0;
-  font-size: 22px;
-}
-
 .why-subtitle {
-  color: #93c5fd;
+  color: #f3c6d4;
   font-size: 14px;
   margin-bottom: 15px;
 }
@@ -300,18 +240,22 @@ body {
 .why-card p {
   font-size: 15px;
   line-height: 1.6;
-  color: #d1d5db;
+  color: #f9e6ec;
 }
 
 .quote {
   display: inline-block;
   margin-top: 15px;
   font-size: 14px;
-  color: #bfdbfe;
-  background: rgba(59,130,246,0.15);
+  color: #f3c6d4;
+  background: rgba(123,30,58,0.35);
   padding: 8px 12px;
   border-radius: 8px;
 }
+
+/* =========================
+   ABOUT SECTION
+========================= */
 .about-section {
   max-width: 900px;
   margin: 80px auto;
@@ -322,17 +266,59 @@ body {
 .about-section h2 {
   font-size: 30px;
   margin-bottom: 20px;
+  color: var(--primary-dark);
 }
 
 .about-section p {
   font-size: 16px;
   line-height: 1.7;
-  color: #444;
+  color: var(--text-muted);
 }
-/* =========================
-   MOBILE NAVBAR FIX
-========================= */
 
+/* =========================
+   NEWSLETTER POPUP
+========================= */
+.newsletter-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.newsletter-popup {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.newsletter-popup button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* =========================
+   MOBILE FIXES + PERFORMANCE
+========================= */
 @media (max-width: 600px) {
 
   .navbar {
@@ -349,50 +335,23 @@ body {
 
   .nav-right {
     flex-direction: column;
+    width: 100%;
     gap: 10px;
-    width: 100%;
   }
 
-  #searchInput {
-    width: 100%;
-  }
-
-  .dropdown {
-    width: 100%;
-    text-align: center;
-  }
-
-  #exploreBtn {
-    width: 100%;
-    padding: 8px 0;
-  }
-
+  #searchInput,
+  #exploreBtn,
   .submit-btn {
     width: 100%;
-    text-align: center;
-    padding: 10px 0;
   }
 
-  .dropdown-content {
-    right: auto;
-    left: 0;
-    width: 100%;
-  }
-}
-/* =========================
-   MOBILE PERFORMANCE FIXES
-========================= */
-
-@media (max-width: 600px) {
   .hero-img {
-    height: 220px;       /* smaller = faster */
-    max-width: 100%;
+    height: 220px;
   }
-}
-@media (max-width: 600px) {
+
+  /* Remove heavy effects on mobile */
   .why-card,
-  .paper-card,
-  .subject-card img {
+  .paper-card {
     box-shadow: none;
   }
 }
