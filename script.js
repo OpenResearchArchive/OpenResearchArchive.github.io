@@ -23,27 +23,35 @@ searchInput.addEventListener("keyup", () => {
       : "none";
   });
 });
-// NEWSLETTER POPUP (HOMEPAGE ONLY)
+// NEWSLETTER POPUP (HOMEPAGE ONLY, SHOW ONCE)
 document.addEventListener("DOMContentLoaded", () => {
   const newsletterOverlay = document.getElementById("newsletterOverlay");
   const closeNewsletter = document.getElementById("closeNewsletter");
 
-  if (newsletterOverlay) {
-    setTimeout(() => {
-      newsletterOverlay.style.display = "flex";
-    }, 4000);
+  // If popup doesn't exist (not homepage), do nothing
+  if (!newsletterOverlay) return;
+
+  // Check if user already closed popup
+  if (localStorage.getItem("newsletterClosed") === "true") {
+    return;
   }
 
-  if (closeNewsletter && newsletterOverlay) {
-    closeNewsletter.addEventListener("click", () => {
+  // Show popup after 4 seconds
+  setTimeout(() => {
+    newsletterOverlay.style.display = "flex";
+  }, 4000);
+
+  // Close button
+  closeNewsletter.addEventListener("click", () => {
+    newsletterOverlay.style.display = "none";
+    localStorage.setItem("newsletterClosed", "true");
+  });
+
+  // Click outside popup to close
+  newsletterOverlay.addEventListener("click", (e) => {
+    if (e.target === newsletterOverlay) {
       newsletterOverlay.style.display = "none";
-    });
-
-    // Optional: click outside popup to close
-    newsletterOverlay.addEventListener("click", (e) => {
-      if (e.target === newsletterOverlay) {
-        newsletterOverlay.style.display = "none";
-      }
-    });
-  }
+      localStorage.setItem("newsletterClosed", "true");
+    }
+  });
 });
