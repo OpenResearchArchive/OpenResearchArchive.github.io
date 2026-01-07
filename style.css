@@ -385,3 +385,48 @@ body {
     height: 220px;
   }
 }
+.content-grid {
+  display: grid;
+  /* Creates 3 columns if space allows, otherwise wraps */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.content-card {
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+/* Hover effects for better UX */
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-color: #007bff;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.content-card h3 {
+  margin: 0 0 10px 0;
+  color: #0056b3;
+}
+
+.content-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+}
+
