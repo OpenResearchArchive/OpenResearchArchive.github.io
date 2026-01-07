@@ -42,16 +42,27 @@ if (exploreBtn && exploreMenu) {
 }
 document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("popupOverlay");
-  const closePopup = document.getElementById("closePopup");
+  const closeBtn = document.getElementById("closePopup");
 
-  if (!popup || !closePopup) return;
+  if (!popup || !closeBtn) return;
 
+  // Show once per session
   if (!sessionStorage.getItem("popupShown")) {
     popup.style.display = "flex";
     sessionStorage.setItem("popupShown", "true");
+  } else {
+    popup.style.display = "none";
   }
 
-  closePopup.addEventListener("click", () => {
+  // Button click
+  closeBtn.onclick = () => {
     popup.style.display = "none";
+  };
+
+  // Click outside box closes popup (fallback)
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.style.display = "none";
+    }
   });
 });
