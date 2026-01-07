@@ -255,3 +255,35 @@ body {
   font-size: 22px;
   cursor: pointer;
 }
+.subjects {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.subject-card {
+  text-decoration: none;
+  color: #1e2a38;
+  text-align: center;
+}
+
+.subject-card img {
+  width: 150px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+
+.subject-card:hover img {
+  transform: translateY(-4px);
+}
+
+.subject-card span {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+}
