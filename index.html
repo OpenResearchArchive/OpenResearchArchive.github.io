@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Student Research Journal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS (non-blocking, already optimal) -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -48,18 +50,38 @@
     and academic notes across multiple disciplines.
   </p>
 
-  <img src="images/hero.jpg" alt="Student academic research" class="hero-img">
+  <!-- Hero loads immediately -->
+  <img
+    src="images/hero.jpg"
+    alt="Student academic research"
+    class="hero-img"
+    width="900"
+    height="320"
+    loading="eager"
+  >
 </header>
 
 <!-- SUBJECT CARDS -->
 <section class="subjects">
   <a href="physics.html" class="subject-card">
-    <img src="images/physics.jpg" alt="Physics">
+    <img
+      src="images/physics.jpg"
+      alt="Physics"
+      width="150"
+      height="95"
+      loading="lazy"
+    >
     <span>Physics</span>
   </a>
 
   <a href="economics.html" class="subject-card">
-    <img src="images/m-ZzOa5G8hSPI-unsplash.jpg" alt="Economics">
+    <img
+      src="images/m-ZzOa5G8hSPI-unsplash.jpg"
+      alt="Economics"
+      width="150"
+      height="95"
+      loading="lazy"
+    >
     <span>Economics</span>
   </a>
 </section>
@@ -69,7 +91,6 @@
   <h2>Why it works</h2>
 
   <div class="why-grid">
-
     <div class="why-card">
       <div class="why-number">1</div>
       <h3>Revise</h3>
@@ -106,7 +127,6 @@
         “I went from average grades to top results”
       </span>
     </div>
-
   </div>
 </section>
 
@@ -162,7 +182,8 @@
   </div>
 </div>
 
-<script src="script.js"></script>
+<!-- JavaScript loaded non-blocking -->
+<script src="script.js" defer></script>
 
 </body>
 </html>
