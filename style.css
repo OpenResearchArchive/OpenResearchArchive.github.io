@@ -195,3 +195,63 @@ body {
 .icon {
   font-size: 42px;
 }
+/* NEWSLETTER POPUP */
+.newsletter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.newsletter-popup {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.newsletter-popup h2 {
+  margin-top: 0;
+}
+
+.newsletter-popup p {
+  font-size: 14px;
+  color: #555;
+}
+
+.newsletter-popup input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.newsletter-popup button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
