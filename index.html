@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <title>Student Research Journal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS (non-blocking, already optimal) -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,28 +11,23 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-  <div class="logo">Student Research Journal</div>
+  <div class="logo">Student <span>Research</span> Journal</div>
 
   <div class="nav-right">
     <input type="text" id="searchInput" placeholder="Search papers...">
 
     <div class="dropdown">
       <button id="exploreBtn">Explore ▾</button>
-
       <div class="dropdown-content" id="exploreMenu">
-        <div class="dropdown-group">
-          <strong>Economics</strong>
-          <a href="economics-research.html">Research Papers</a>
-          <a href="economics-olevel.html">O-Level Notes</a>
-          <a href="economics-alevel.html">A-Level Notes</a>
-        </div>
-
-        <div class="dropdown-group">
-          <strong>Physics</strong>
-          <a href="physics-research.html">Research Papers</a>
-          <a href="physics-olevel.html">O-Level Notes</a>
-          <a href="physics-alevel.html">A-Level Notes</a>
-        </div>
+        <strong>Physics</strong>
+        <a href="physics.html">Research Papers</a>
+        <a href="#">O-Level Notes</a>
+        <a href="#">A-Level Notes</a>
+        <hr>
+        <strong>Economics</strong>
+        <a href="economics.html">Research Papers</a>
+        <a href="#">O-Level Notes</a>
+        <a href="#">A-Level Notes</a>
       </div>
     </div>
 
@@ -49,39 +42,17 @@
     An open-access platform publishing student research papers
     and academic notes across multiple disciplines.
   </p>
-
-  <!-- Hero loads immediately -->
-  <img
-    src="images/hero.jpg"
-    alt="Student academic research"
-    class="hero-img"
-    width="900"
-    height="320"
-    loading="eager"
-  >
+  <img src="images/hero.jpg" class="hero-img" alt="Students studying">
 </header>
 
-<!-- SUBJECT CARDS -->
+<!-- SUBJECTS -->
 <section class="subjects">
   <a href="physics.html" class="subject-card">
-    <img
-      src="images/physics.jpg"
-      alt="Physics"
-      width="150"
-      height="95"
-      loading="lazy"
-    >
+    <img src="images/physics.jpg" alt="Physics">
     <span>Physics</span>
   </a>
-
   <a href="economics.html" class="subject-card">
-    <img
-      src="images/m-ZzOa5G8hSPI-unsplash.jpg"
-      alt="Economics"
-      width="150"
-      height="95"
-      loading="lazy"
-    >
+    <img src="images/economics.jpg" alt="Economics">
     <span>Economics</span>
   </a>
 </section>
@@ -94,125 +65,86 @@
     <div class="why-card">
       <div class="why-number">1</div>
       <h3>Revise</h3>
-      <p class="why-subtitle">only what you need to</p>
-      <p>
-        All resources are written specifically for each syllabus,
-        ensuring students focus only on the material that matters.
-      </p>
+      <p class="why-subtitle">only what you need</p>
+      <p>Resources are syllabus-aligned so students focus on what truly matters.</p>
       <span class="quote">“Never felt so relieved in my life”</span>
     </div>
 
     <div class="why-card">
       <div class="why-number">2</div>
       <h3>Test yourself</h3>
-      <p class="why-subtitle">and check progress</p>
-      <p>
-        Structured questions and research-based explanations
-        help students build confidence and deepen understanding.
-      </p>
-      <span class="quote">
-        “The tailored level of questions builds real confidence”
-      </span>
+      <p class="why-subtitle">and track progress</p>
+      <p>Structured material builds confidence and understanding.</p>
+      <span class="quote">“Tailored questions build confidence”</span>
     </div>
 
     <div class="why-card">
       <div class="why-number">3</div>
       <h3>Improve</h3>
       <p class="why-subtitle">answer by answer</p>
-      <p>
-        Learn how to achieve maximum marks through model answers,
-        examiner-style feedback, and academic standards.
-      </p>
-      <span class="quote">
-        “I went from average grades to top results”
-      </span>
+      <p>Learn how to achieve top marks with academic precision.</p>
+      <span class="quote">“From average to top grades”</span>
     </div>
   </div>
 </section>
 
-<!-- ABOUT SECTION -->
+<!-- ABOUT -->
 <section class="about-section">
   <h2>About the Journal</h2>
   <p>
-    The <strong>Student Research Journal</strong> is an independent,
-    open-access platform dedicated to publishing high-quality student
-    research papers and academic notes across multiple disciplines.
-  </p>
-  <p>
-    Our mission is to support academic excellence by providing
-    syllabus-aligned resources and a credible platform for young
-    researchers to share original work.
+    The Student Research Journal is an independent open-access platform
+    dedicated to publishing high-quality student research and academic notes.
   </p>
 </section>
 
-<!-- FEATURED PAPERS -->
-<section class="papers" id="paperList">
+<!-- PAPERS -->
+<section class="papers">
   <div class="paper-card">
     <h3>Inflation Trends in Pakistan</h3>
     <p class="subject">Economics</p>
-    <p class="author">By Student Author</p>
+    <p>By Student Author</p>
   </div>
 
   <div class="paper-card">
     <h3>Quantum Tunneling Explained</h3>
     <p class="subject">Physics</p>
-    <p class="author">By Student Author</p>
+    <p>By Student Author</p>
   </div>
 
   <div class="paper-card">
     <h3>Applications of Derivatives</h3>
     <p class="subject">Mathematics</p>
-    <p class="author">By Student Author</p>
+    <p>By Student Author</p>
   </div>
 </section>
 
-<!-- NEWSLETTER POPUP -->
-<div class="newsletter-overlay" id="newsletterOverlay">
-  <div class="newsletter-popup">
-    <button class="close-btn" id="closeNewsletter">&times;</button>
-    <h2>Subscribe to our Newsletter</h2>
-    <p>
-      Get updates on newly published student research papers,
-      notes, and academic opportunities.
-    </p>
-    <form>
-      <input type="email" placeholder="Enter your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-</div>
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-content">
-
-    <div class="footer-brand">
-      <div class="footer-logo">Student Research Journal</div>
-      <p>
-        An independent, open-access platform publishing
-        student research and academic notes.
-      </p>
+    <div>
+      <strong>Student Research Journal</strong>
+      <p>An independent, open-access academic platform.</p>
     </div>
 
-    <div class="footer-links">
+    <div>
       <h4>Explore</h4>
       <a href="physics.html">Physics</a>
       <a href="economics.html">Economics</a>
     </div>
 
-    <div class="footer-links">
+    <div>
       <h4>Journal</h4>
-      <a href="submit.html">Submit Article</a>
+      <a href="submit.html">Submit</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
     </div>
-
   </div>
 
   <div class="footer-bottom">
     © 2026 Student Research Journal · Open Access
   </div>
 </footer>
-<!-- JavaScript loaded non-blocking -->
-<script src="script.js" defer></script>
 
+<script src="script.js" defer></script>
 </body>
 </html>
