@@ -23,18 +23,27 @@ searchInput.addEventListener("keyup", () => {
       : "none";
   });
 });
-// NEWSLETTER POPUP
-const newsletterOverlay = document.getElementById("newsletterOverlay");
-const closeNewsletter = document.getElementById("closeNewsletter");
+// NEWSLETTER POPUP (HOMEPAGE ONLY)
+document.addEventListener("DOMContentLoaded", () => {
+  const newsletterOverlay = document.getElementById("newsletterOverlay");
+  const closeNewsletter = document.getElementById("closeNewsletter");
 
-if (newsletterOverlay) {
-  setTimeout(() => {
-    newsletterOverlay.style.display = "flex";
-  }, 4000); // shows after 4 seconds
-}
+  if (newsletterOverlay) {
+    setTimeout(() => {
+      newsletterOverlay.style.display = "flex";
+    }, 4000);
+  }
 
-if (closeNewsletter) {
-  closeNewsletter.addEventListener("click", () => {
-    newsletterOverlay.style.display = "none";
-  });
-}
+  if (closeNewsletter && newsletterOverlay) {
+    closeNewsletter.addEventListener("click", () => {
+      newsletterOverlay.style.display = "none";
+    });
+
+    // Optional: click outside popup to close
+    newsletterOverlay.addEventListener("click", (e) => {
+      if (e.target === newsletterOverlay) {
+        newsletterOverlay.style.display = "none";
+      }
+    });
+  }
+});
