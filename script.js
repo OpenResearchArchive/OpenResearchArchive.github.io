@@ -40,3 +40,19 @@ if (exploreBtn && exploreMenu) {
     }
   });
 }
+// POPUP ON FIRST VISIT (PER SESSION)
+const popup = document.getElementById("popupOverlay");
+const closePopup = document.getElementById("closePopup");
+
+if (popup && closePopup) {
+  if (!sessionStorage.getItem("popupShown")) {
+    popup.style.display = "flex";
+    sessionStorage.setItem("popupShown", "true");
+  } else {
+    popup.style.display = "none";
+  }
+
+  closePopup.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+}
