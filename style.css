@@ -1,6 +1,9 @@
 /* =========================
    COLOR THEME
 ========================= */
+body {
+  background: red !important;
+}
 :root {
   --maroon: #6b1020;
   --maroon-dark: #4a0b15;
