@@ -379,3 +379,20 @@ body {
     width: 100%;
   }
 }
+/* =========================
+   MOBILE PERFORMANCE FIXES
+========================= */
+
+@media (max-width: 600px) {
+  .hero-img {
+    height: 220px;       /* smaller = faster */
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .why-card,
+  .paper-card,
+  .subject-card img {
+    box-shadow: none;
+  }
+}
