@@ -23,3 +23,18 @@ searchInput.addEventListener("keyup", () => {
       : "none";
   });
 });
+// NEWSLETTER POPUP
+const newsletterOverlay = document.getElementById("newsletterOverlay");
+const closeNewsletter = document.getElementById("closeNewsletter");
+
+if (newsletterOverlay) {
+  setTimeout(() => {
+    newsletterOverlay.style.display = "flex";
+  }, 4000); // shows after 4 seconds
+}
+
+if (closeNewsletter) {
+  closeNewsletter.addEventListener("click", () => {
+    newsletterOverlay.style.display = "none";
+  });
+}
