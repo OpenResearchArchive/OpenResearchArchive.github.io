@@ -127,21 +127,26 @@ body {
 }
 
 /* ================= MOBILE ================= */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .hamburger {
     display: block;
   }
 
   .nav-right {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
     display: none;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
     background: linear-gradient(180deg, var(--black), var(--maroon));
-    padding: 15px 0;
+    padding: 20px 0;
+    z-index: 999;
   }
 
   .nav-right.show {
-    display: flex;
+    display: flex !important;
   }
 
   #searchInput {
