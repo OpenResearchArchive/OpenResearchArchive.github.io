@@ -315,3 +315,15 @@ section {
     height: 220px;
   }
 }
+.about-section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-section p {
+  margin: 20px auto 0;
+  max-width: 750px;   /* keeps lines readable */
+  line-height: 1.7;
+}
