@@ -13,8 +13,8 @@
 <nav class="navbar">
   <div class="logo">Student Research Journal</div>
 
-  <!-- Hamburger (mobile only) -->
-  <button class="hamburger" id="hamburgerBtn">☰</button>
+  <!-- Hamburger (mobile / iPad) -->
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menu">☰</button>
 
   <div class="nav-right" id="navMenu">
     <input type="text" id="searchInput" placeholder="Search papers...">
@@ -23,47 +23,100 @@
       <button id="exploreBtn">Explore ▾</button>
       <div class="dropdown-content" id="exploreMenu">
         <strong>Physics</strong>
-        <a href="#">Research Papers</a>
-        <a href="#">O-Level Notes</a>
-        <a href="#">A-Level Notes</a>
+        <a href="physics-research.html">Research Papers</a>
+        <a href="physics-olevel.html">O-Level Notes</a>
+        <a href="physics-alevel.html">A-Level Notes</a>
         <hr>
         <strong>Economics</strong>
-        <a href="#">Research Papers</a>
-        <a href="#">O-Level Notes</a>
-        <a href="#">A-Level Notes</a>
+        <a href="economics-research.html">Research Papers</a>
+        <a href="economics-olevel.html">O-Level Notes</a>
+        <a href="economics-alevel.html">A-Level Notes</a>
       </div>
     </div>
 
-    <a class="submit-btn" href="#">Submit Article</a>
+    <a class="submit-btn" href="submit.html">Submit Article</a>
   </div>
 </nav>
 
 <!-- ================= HERO ================= -->
 <header class="hero">
   <h1>Student Research Journal</h1>
-  <p>An open-access platform for student research and academic notes.</p>
+  <p>
+    An open-access platform publishing student research papers
+    and academic notes across multiple disciplines.
+  </p>
 </header>
 
-<!-- ================= CONTENT ================= -->
+<!-- ================= WHY IT WORKS ================= -->
+<section class="why-it-works">
+  <h2>What We Offer</h2>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <div class="why-number">1</div>
+      <h3>Revise</h3>
+      <p class="why-subtitle">only what you need</p>
+      <p>Resources are syllabus-aligned so students focus on what truly matters.</p>
+      <span class="quote">“Never felt so relieved in my life”</span>
+    </div>
+
+    <div class="why-card">
+      <div class="why-number">2</div>
+      <h3>Test Yourself</h3>
+      <p class="why-subtitle">and track progress</p>
+      <p>Structured material builds confidence and understanding.</p>
+      <span class="quote">“Tailored questions build confidence”</span>
+    </div>
+
+    <div class="why-card">
+      <div class="why-number">3</div>
+      <h3>Improve</h3>
+      <p class="why-subtitle">answer by answer</p>
+      <p>Learn how to achieve top marks with academic precision.</p>
+      <span class="quote">“From average to top grades”</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about-section">
+  <h2>About the Journal</h2>
+  <p>
+    The Student Research Journal is an independent, open-access academic platform
+    dedicated to publishing high-quality student research and academic notes
+    across multiple disciplines. It is designed to give students a credible
+    space to share original work while helping others learn from well-structured,
+    peer-focused academic resources.
+  </p>
+</section>
+
+<!-- ================= FEATURED CONTENT ================= -->
 <section class="content-grid">
-  <a class="content-card">
+
+  <a href="#" class="content-card">
     <h3>Inflation Trends in Pakistan</h3>
     <p>Economics · Research Paper</p>
   </a>
 
-  <a class="content-card">
+  <a href="#" class="content-card">
     <h3>Quantum Tunneling Explained</h3>
     <p>Physics · Research Paper</p>
   </a>
 
-  <a class="content-card">
+  <a href="#" class="content-card">
     <h3>Applications of Derivatives</h3>
     <p>Mathematics · Notes</p>
   </a>
+
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  © 2026 Student Research Journal
+  <div class="footer-bottom">
+    © 2026 Student Research Journal · Open Access
+  </div>
 </footer>
 
 <script src="script.js" defer></script>
