@@ -429,3 +429,41 @@ body {
     height: 220px;
   }
 }
+/* FLOATING ANIMATION */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.icon-circle {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Glow on hover */
+.subject-card:hover .icon-circle {
+  box-shadow:
+    0 0 0 4px rgba(107,16,32,0.15),
+    0 15px 30px rgba(107,16,32,0.45);
+}
+.subject-card {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.subject-card:nth-child(1) { animation-delay: 0.1s; }
+.subject-card:nth-child(2) { animation-delay: 0.2s; }
+.subject-card:nth-child(3) { animation-delay: 0.3s; }
+.subject-card:nth-child(4) { animation-delay: 0.4s; }
+.subject-card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
