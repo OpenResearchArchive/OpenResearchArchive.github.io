@@ -5,90 +5,8 @@
   <title>Student Research Journal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+</head>
 
-  <style>
-  <section class="subjects">
-  <h2>Resources by Subject</h2>
-
-  <div class="subject-grid">
-
-    <!-- PHYSICS -->
-    <a href="physics.html" class="subject-card">
-      <div class="icon-circle">
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="1.8"
-             stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="1.5"></circle>
-          <ellipse cx="12" cy="12" rx="10" ry="4"></ellipse>
-          <ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(60 12 12)"></ellipse>
-          <ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(-60 12 12)"></ellipse>
-        </svg>
-      </div>
-      <p>Physics</p>
-    </a>
-
-    <!-- ECONOMICS -->
-    <a href="economics.html" class="subject-card">
-      <div class="icon-circle">
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="3 17 9 11 13 15 21 7"></polyline>
-          <polyline points="21 7 21 13"></polyline>
-          <polyline points="21 7 15 7"></polyline>
-        </svg>
-      </div>
-      <p>Economics</p>
-    </a>
-
-    <!-- MATHS -->
-    <a href="maths.html" class="subject-card">
-      <div class="icon-circle">
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4h16"></path>
-          <path d="M4 20h16"></path>
-          <path d="M9 4v16"></path>
-          <path d="M15 4v16"></path>
-        </svg>
-      </div>
-      <p>Maths</p>
-    </a>
-
-    <!-- CHEMISTRY -->
-    <a href="chemistry.html" class="subject-card">
-      <div class="icon-circle">
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M10 2h4"></path>
-          <path d="M12 2v6"></path>
-          <path d="M6 22h12"></path>
-          <path d="M8 8l-4 14"></path>
-          <path d="M16 8l4 14"></path>
-        </svg>
-      </div>
-      <p>Chemistry</p>
-    </a>
-
-    <!-- BIOLOGY -->
-    <a href="biology.html" class="subject-card">
-      <div class="icon-circle">
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4c4 4 12 12 16 16"></path>
-          <path d="M20 4c-4 4-12 12-16 16"></path>
-          <line x1="6" y1="6" x2="9" y2="6"></line>
-          <line x1="15" y1="15" x2="18" y2="15"></line>
-        </svg>
-      </div>
-      <p>Biology</p>
-    </a>
-
-  </div>
-</section>
 <body>
 
 <!-- NAVBAR -->
@@ -101,19 +19,15 @@
     <div class="dropdown">
       <button id="exploreBtn">Explore ▾</button>
       <div class="dropdown-content" id="exploreMenu">
-
         <strong>Physics</strong>
         <a href="physics-research.html">Research Papers</a>
         <a href="physics-olevel.html">O-Level Notes</a>
         <a href="physics-alevel.html">A-Level Notes</a>
-
         <hr>
-
         <strong>Economics</strong>
         <a href="economics-research.html">Research Papers</a>
         <a href="economics-olevel.html">O-Level Notes</a>
         <a href="economics-alevel.html">A-Level Notes</a>
-
       </div>
     </div>
 
@@ -131,43 +45,83 @@
   <img src="images/IMG_0344.jpeg" class="hero-img" alt="Students studying">
 </header>
 
-<!-- SUBJECT ICONS (NEW) -->
+<!-- SUBJECT ICONS -->
 <section class="subjects">
   <h2>Resources by Subject</h2>
 
   <div class="subject-grid">
 
+    <!-- Physics -->
     <a href="physics.html" class="subject-card">
       <div class="icon-circle">
-        <img src="icons/physics.svg" alt="Physics">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.8"
+             stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="1.5"/>
+          <ellipse cx="12" cy="12" rx="10" ry="4"/>
+          <ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(60 12 12)"/>
+          <ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(-60 12 12)"/>
+        </svg>
       </div>
       <p>Physics</p>
     </a>
 
+    <!-- Economics -->
     <a href="economics.html" class="subject-card">
       <div class="icon-circle">
-        <img src="icons/economics.svg" alt="Economics">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 17 9 11 13 15 21 7"/>
+          <polyline points="21 7 21 13"/>
+          <polyline points="21 7 15 7"/>
+        </svg>
       </div>
       <p>Economics</p>
     </a>
 
+    <!-- Maths -->
     <a href="maths.html" class="subject-card">
       <div class="icon-circle">
-        <img src="icons/maths.svg" alt="Maths">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16"/>
+          <path d="M4 20h16"/>
+          <path d="M9 4v16"/>
+          <path d="M15 4v16"/>
+        </svg>
       </div>
       <p>Maths</p>
     </a>
 
+    <!-- Chemistry -->
     <a href="chemistry.html" class="subject-card">
       <div class="icon-circle">
-        <img src="icons/chemistry.svg" alt="Chemistry">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 2h4"/>
+          <path d="M12 2v6"/>
+          <path d="M6 22h12"/>
+          <path d="M8 8l-4 14"/>
+          <path d="M16 8l4 14"/>
+        </svg>
       </div>
       <p>Chemistry</p>
     </a>
 
+    <!-- Biology -->
     <a href="biology.html" class="subject-card">
       <div class="icon-circle">
-        <img src="icons/biology.svg" alt="Biology">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4c4 4 12 12 16 16"/>
+          <path d="M20 4c-4 4-12 12-16 16"/>
+          <line x1="6" y1="6" x2="9" y2="6"/>
+          <line x1="15" y1="15" x2="18" y2="15"/>
+        </svg>
       </div>
       <p>Biology</p>
     </a>
@@ -175,89 +129,7 @@
   </div>
 </section>
 
-<!-- WHY IT WORKS -->
-<section class="why-it-works">
-  <h2>Why it works</h2>
-
-  <div class="why-grid">
-    <div class="why-card">
-      <div class="why-number">1</div>
-      <h3>Revise</h3>
-      <p class="why-subtitle">only what you need</p>
-      <p>Resources are syllabus-aligned so students focus on what truly matters.</p>
-      <span class="quote">“Never felt so relieved in my life”</span>
-    </div>
-
-    <div class="why-card">
-      <div class="why-number">2</div>
-      <h3>Test yourself</h3>
-      <p class="why-subtitle">and track progress</p>
-      <p>Structured material builds confidence and understanding.</p>
-      <span class="quote">“Tailored questions build confidence”</span>
-    </div>
-
-    <div class="why-card">
-      <div class="why-number">3</div>
-      <h3>Improve</h3>
-      <p class="why-subtitle">answer by answer</p>
-      <p>Learn how to achieve top marks with academic precision.</p>
-      <span class="quote">“From average to top grades”</span>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about-section">
-  <h2>About the Journal</h2>
-  <p>
-    The Student Research Journal is an independent open-access platform
-    dedicated to publishing high-quality student research and academic notes.
-  </p>
-</section>
-
-<!-- FEATURED PAPERS -->
-<section class="content-grid">
-  <a href="#" class="content-card">
-    <h3>Inflation Trends in Pakistan</h3>
-    <p>Economics · Research Paper</p>
-    <p>By Student Author</p>
-  </a>
-
-  <a href="#" class="content-card">
-    <h3>Quantum Tunneling Explained</h3>
-    <p>Physics · Research Paper</p>
-    <p>By Student Author</p>
-  </a>
-
-  <a href="#" class="content-card">
-    <h3>Applications of Derivatives</h3>
-    <p>Mathematics · Notes</p>
-    <p>By Student Author</p>
-  </a>
-</section>
-
-<!-- FOOTER -->
 <footer class="site-footer">
-  <div class="footer-content">
-    <div>
-      <strong>Student Research Journal</strong>
-      <p>An independent, open-access academic platform.</p>
-    </div>
-
-    <div>
-      <h4>Explore</h4>
-      <a href="physics.html">Physics</a>
-      <a href="economics.html">Economics</a>
-    </div>
-
-    <div>
-      <h4>Journal</h4>
-      <a href="submit.html">Submit</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
-
   <div class="footer-bottom">
     © 2026 Student Research Journal · Open Access
   </div>
