@@ -9,61 +9,92 @@
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
   <div class="logo">Student Research Journal</div>
+
   <div class="nav-right">
-    <a class="submit-btn" href="index.html">Home</a>
+    <input type="text" id="searchInput" placeholder="Search physics papers...">
+
+    <div class="dropdown">
+      <button id="exploreBtn">Explore ▾</button>
+      <div class="dropdown-content" id="exploreMenu">
+        <strong>Physics</strong>
+        <a href="physics.html">All Physics</a>
+        <a href="physics-research.html">Research Papers</a>
+        <a href="physics-olevel.html">O-Level Notes</a>
+        <a href="physics-alevel.html">A-Level Notes</a>
+        <hr>
+        <strong>Economics</strong>
+        <a href="economics.html">All Economics</a>
+      </div>
+    </div>
+
+    <a class="submit-btn" href="submit.html">Submit Article</a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ================= PAGE HEADER ================= -->
 <header class="hero">
   <h1>Physics</h1>
   <p>
-    Explore student research papers and academic notes in Physics,
-    including O-Level and A-Level resources.
+    Research papers and academic notes in classical mechanics,
+    quantum physics, electricity & magnetism, and modern physics.
   </p>
 </header>
 
-<!-- CONTENT GUIDES -->
+<!-- ================= FILTER TAGS ================= -->
+<section class="about-section">
+  <p><strong>Browse:</strong> Research Papers · O-Level Notes · A-Level Notes</p>
+</section>
+
+<!-- ================= PHYSICS CONTENT ================= -->
 <section class="content-grid">
 
-  <a href="physics-research.html" class="content-card">
-    <div class="icon">📄</div>
-    <h3>Research Papers</h3>
-    <p>
-      Original student research, investigations, and experimental
-      work in Physics.
-    </p>
+  <!-- Research Paper -->
+  <a href="#" class="content-card">
+    <h3>Quantum Tunneling Explained</h3>
+    <p>Physics · Research Paper</p>
+    <p>By Student Author</p>
   </a>
 
-  <a href="physics-olevel.html" class="content-card">
-    <div class="icon">📘</div>
-    <h3>O-Level Notes</h3>
-    <p>
-      Cambridge O-Level Physics notes, summaries, diagrams,
-      and explanations.
-    </p>
+  <!-- Research Paper -->
+  <a href="#" class="content-card">
+    <h3>Applications of Schrödinger’s Equation</h3>
+    <p>Physics · Research Paper</p>
+    <p>By Student Author</p>
   </a>
 
-  <a href="physics-alevel.html" class="content-card">
-    <div class="icon">📕</div>
-    <h3>A-Level Notes</h3>
-    <p>
-      Advanced A-Level Physics concepts, derivations,
-      problem-solving techniques, and revision material.
-    </p>
+  <!-- A-Level Notes -->
+  <a href="#" class="content-card">
+    <h3>Electric Fields and Capacitors</h3>
+    <p>Physics · A-Level Notes</p>
+    <p>Cambridge A-Level</p>
+  </a>
+
+  <!-- O-Level Notes -->
+  <a href="#" class="content-card">
+    <h3>Newton’s Laws of Motion</h3>
+    <p>Physics · O-Level Notes</p>
+    <p>Cambridge O-Level</p>
+  </a>
+
+  <!-- Placeholder -->
+  <a href="#" class="content-card">
+    <h3>More papers coming soon</h3>
+    <p>Physics · Updates</p>
+    <p>Stay tuned</p>
   </a>
 
 </section>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="footer-bottom">
     © 2026 Student Research Journal · Open Access
   </div>
 </footer>
 
+<script src="script.js" defer></script>
 </body>
 </html>
