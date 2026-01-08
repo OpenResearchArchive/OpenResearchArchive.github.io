@@ -13,186 +13,57 @@
 <nav class="navbar">
   <div class="logo">Student Research Journal</div>
 
-  <div class="nav-right">
+  <!-- Hamburger (mobile only) -->
+  <button class="hamburger" id="hamburgerBtn">☰</button>
+
+  <div class="nav-right" id="navMenu">
     <input type="text" id="searchInput" placeholder="Search papers...">
 
     <div class="dropdown">
       <button id="exploreBtn">Explore ▾</button>
       <div class="dropdown-content" id="exploreMenu">
         <strong>Physics</strong>
-        <a href="physics-research.html">Research Papers</a>
-        <a href="physics-olevel.html">O-Level Notes</a>
-        <a href="physics-alevel.html">A-Level Notes</a>
+        <a href="#">Research Papers</a>
+        <a href="#">O-Level Notes</a>
+        <a href="#">A-Level Notes</a>
         <hr>
         <strong>Economics</strong>
-        <a href="economics-research.html">Research Papers</a>
-        <a href="economics-olevel.html">O-Level Notes</a>
-        <a href="economics-alevel.html">A-Level Notes</a>
+        <a href="#">Research Papers</a>
+        <a href="#">O-Level Notes</a>
+        <a href="#">A-Level Notes</a>
       </div>
     </div>
 
-    <a class="submit-btn" href="submit.html">Submit Article</a>
+    <a class="submit-btn" href="#">Submit Article</a>
   </div>
 </nav>
 
 <!-- ================= HERO ================= -->
 <header class="hero">
   <h1>Student Research Journal</h1>
-  <p>
-    An open-access platform publishing student research papers
-    and academic notes across multiple disciplines.
-  </p>
-  <img src="images/IMG_0344.jpeg" class="hero-img" alt="Students studying">
+  <p>An open-access platform for student research and academic notes.</p>
 </header>
 
-<!-- ================= SUBJECT ICONS ================= -->
-<section class="subjects">
-  <h2>Resources by Subject</h2>
-
-  <div class="subject-grid">
-
-    <a href="physics.html" class="subject-card">
-      <div class="icon-circle">
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="1.8"
-             stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="1.5"/>
-          <ellipse cx="12" cy="12" rx="10" ry="4"/>
-          <ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(60 12 12)"/>
-          <ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(-60 12 12)"/>
-        </svg>
-      </div>
-      <p>Physics</p>
-    </a>
-
-    <a href="economics.html" class="subject-card">
-      <div class="icon-circle">
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="3 17 9 11 13 15 21 7"/>
-          <polyline points="21 7 21 13"/>
-          <polyline points="21 7 15 7"/>
-        </svg>
-      </div>
-      <p>Economics</p>
-    </a>
-
-    <a href="maths.html" class="subject-card">
-      <div class="icon-circle">
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4h16"/>
-          <path d="M4 20h16"/>
-          <path d="M9 4v16"/>
-          <path d="M15 4v16"/>
-        </svg>
-      </div>
-      <p>Maths</p>
-    </a>
-
-    <a href="chemistry.html" class="subject-card">
-      <div class="icon-circle">
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M10 2h4"/>
-          <path d="M12 2v6"/>
-          <path d="M6 22h12"/>
-          <path d="M8 8l-4 14"/>
-          <path d="M16 8l4 14"/>
-        </svg>
-      </div>
-      <p>Chemistry</p>
-    </a>
-
-    <a href="biology.html" class="subject-card">
-      <div class="icon-circle">
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4c4 4 12 12 16 16"/>
-          <path d="M20 4c-4 4-12 12-16 16"/>
-          <line x1="6" y1="6" x2="9" y2="6"/>
-          <line x1="15" y1="15" x2="18" y2="15"/>
-        </svg>
-      </div>
-      <p>Biology</p>
-    </a>
-
-  </div>
-</section>
-
-<!-- ================= WHAT WE OFFER ================= -->
-<section class="why-it-works">
-  <h2>What We Offer</h2>
-
-  <div class="why-grid">
-
-    <div class="why-card">
-      <div class="why-number">1</div>
-      <h3>Revise</h3>
-      <p class="why-subtitle">only what you need</p>
-      <p>Resources are syllabus-aligned so students focus on what truly matters.</p>
-      <span class="quote">“Never felt so relieved in my life”</span>
-    </div>
-
-    <div class="why-card">
-      <div class="why-number">2</div>
-      <h3>Test Yourself</h3>
-      <p class="why-subtitle">and track progress</p>
-      <p>Structured material builds confidence and understanding.</p>
-      <span class="quote">“Tailored questions build confidence”</span>
-    </div>
-
-    <div class="why-card">
-      <div class="why-number">3</div>
-      <h3>Improve</h3>
-      <p class="why-subtitle">answer by answer</p>
-      <p>Learn how to achieve top marks with academic precision.</p>
-      <span class="quote">“From average to top grades”</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= ABOUT ================= -->
-<section class="about-section">
-  <h2>About the Journal</h2>
-  <p>
-    The Student Research Journal is an independent, open-access academic platform
-    dedicated to publishing high-quality student research and academic notes
-    across multiple disciplines.
-  </p>
-</section>
-
-<!-- ================= FEATURED ARTICLES ================= -->
+<!-- ================= CONTENT ================= -->
 <section class="content-grid">
-  <a href="#" class="content-card">
+  <a class="content-card">
     <h3>Inflation Trends in Pakistan</h3>
     <p>Economics · Research Paper</p>
-    <p>By Student Author</p>
   </a>
 
-  <a href="#" class="content-card">
+  <a class="content-card">
     <h3>Quantum Tunneling Explained</h3>
     <p>Physics · Research Paper</p>
-    <p>By Student Author</p>
   </a>
 
-  <a href="#" class="content-card">
+  <a class="content-card">
     <h3>Applications of Derivatives</h3>
     <p>Mathematics · Notes</p>
-    <p>By Student Author</p>
   </a>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  <div class="footer-bottom">
-    © 2026 Student Research Journal · Open Access
-  </div>
+  © 2026 Student Research Journal
 </footer>
 
 <script src="script.js" defer></script>
