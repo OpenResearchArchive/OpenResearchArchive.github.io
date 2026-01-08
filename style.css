@@ -1,60 +1,32 @@
-/* =========================
-   COLOR THEME
-========================= */
 :root {
   --maroon: #6b1020;
-  --maroon-dark: #3a0711; /* darker for icon strokes */
-
-  --blue: #1e3a8a;
-  --blue-soft: #60a5fa;
-
   --black: #0f0f0f;
   --white: #ffffff;
-
-  --bg-light: #f5f6f8;
-  --bg-soft: #fafafa;
-
-  --text-main: #1f2933;
-  --text-muted: #6b7280;
+  --blue: #1e3a8a;
 }
 
-/* =========================
-   GLOBAL
-========================= */
-* {
-  box-sizing: border-box;
-}
-
+/* ================= GLOBAL ================= */
 body {
   margin: 0;
   font-family: Georgia, serif;
-  background: var(--bg-light);
-  color: var(--text-main);
+  background: #f5f6f8;
 }
 
-section {
-  margin-bottom: 80px;
-}
-
-/* =========================
-   NAVBAR
-========================= */
+/* ================= NAVBAR ================= */
 .navbar {
   background: linear-gradient(90deg, var(--black), var(--maroon));
-  color: var(--white);
+  color: white;
   padding: 14px 30px;
-
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
   font-weight: bold;
-  font-size: 18px;
-  color: white;
 }
 
+/* ================= NAV RIGHT ================= */
 .nav-right {
   display: flex;
   align-items: center;
@@ -62,14 +34,12 @@ section {
 }
 
 #searchInput {
-  padding: 7px 10px;
+  padding: 6px 10px;
   border-radius: 6px;
   border: none;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* ================= BUTTONS ================= */
 .submit-btn {
   background: var(--blue);
   color: white;
@@ -78,13 +48,7 @@ section {
   text-decoration: none;
 }
 
-.submit-btn:hover {
-  background: #1e40af;
-}
-
-/* =========================
-   DROPDOWN
-========================= */
+/* ================= DROPDOWN ================= */
 .dropdown {
   position: relative;
 }
@@ -98,258 +62,89 @@ section {
 
 .dropdown-content {
   position: absolute;
-  top: 42px;
+  top: 40px;
   right: 0;
   background: white;
-  min-width: 260px;
-  padding: 14px;
+  min-width: 240px;
+  padding: 12px;
   border-radius: 10px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
   display: none;
-  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
-.dropdown-content strong {
-  color: var(--maroon);
+.dropdown-content.show {
+  display: block;
 }
 
 .dropdown-content a {
   display: block;
-  padding: 4px 0;
   text-decoration: none;
-  color: var(--text-main);
+  color: black;
+  padding: 4px 0;
 }
 
-.dropdown-content a:hover {
-  color: var(--blue);
-}
-
-/* =========================
-   HERO
-========================= */
+/* ================= HERO ================= */
 .hero {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(180deg, var(--bg-soft), var(--bg-light));
 }
 
 .hero h1 {
   color: var(--maroon);
 }
 
-.hero p {
-  max-width: 700px;
-  margin: auto;
-}
-
-.hero-img {
-  max-width: 900px;
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 16px;
-  margin-top: 30px;
-}
-
-/* =========================
-   SUBJECT ICONS
-========================= */
-.subjects {
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.subjects h2 {
-  color: var(--maroon);
-  font-size: 30px;
-  margin-bottom: 45px;
-}
-
-.subject-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 45px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.subject-card {
-  text-decoration: none;
-  color: var(--maroon);
-  animation: fadeUp 0.7s ease forwards;
-  opacity: 1;
-}
-
-.subject-card:hover {
-  transform: translateY(-6px);
-}
-
-.icon-circle {
-  width: 130px;
-  height: 130px;
-  background: linear-gradient(135deg, var(--maroon), #520c19);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 14px;
-  box-shadow: 0 12px 28px rgba(107,16,32,0.4);
-  animation: float 4s ease-in-out infinite;
-}
-
-/* DARKER ICON SYMBOL */
-.icon-circle svg {
-  stroke: #2a050c; /* darker icon symbol */
-}
-
-.subject-card p {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-/* =========================
-   ANIMATIONS
-========================= */
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.subject-card:hover .icon-circle {
-  box-shadow:
-    0 0 0 4px rgba(107,16,32,0.15),
-    0 18px 35px rgba(107,16,32,0.5);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .icon-circle {
-    animation: none;
-  }
-}
-
-/* =========================
-   WHY IT WORKS
-========================= */
-.why-it-works {
-  background: linear-gradient(135deg, var(--black), var(--maroon));
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.why-card {
-  background: rgba(255,255,255,0.08);
-  padding: 30px;
-  border-radius: 16px;
-}
-
-/* =========================
-   CONTENT GRID
-========================= */
+/* ================= CONTENT ================= */
 .content-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 20px;
   padding: 40px 20px;
 }
 
 .content-card {
   background: white;
-  border-radius: 14px;
-  padding: 22px;
+  padding: 20px;
+  border-radius: 12px;
   border: 1px solid #ddd;
-  text-decoration: none;
-  color: var(--text-main);
 }
 
-.content-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* ================= FOOTER ================= */
 .site-footer {
   background: var(--black);
   color: white;
-}
-
-.footer-bottom {
   text-align: center;
   padding: 15px;
-  font-size: 13px;
-  color: #9ca3af;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 700px) {
-  .navbar,
+  .hamburger {
+    display: block;
+  }
+
   .nav-right {
+    display: none;
     flex-direction: column;
+    width: 100%;
+    background: linear-gradient(180deg, var(--black), var(--maroon));
+    padding: 15px 0;
   }
 
-  .hero-img {
-    height: 220px;
+  .nav-right.show {
+    display: flex;
   }
-}
-.about-section {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 0 20px;
-  text-align: center;
-}
 
-.about-section p {
-  margin: 20px auto 0;
-  max-width: 750px;   /* keeps lines readable */
-  line-height: 1.7;
-}
-.about-section h2 {
-  margin-bottom: 25px;
-}
-
-.about-section p {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* ===============================
-   DROPDOWN VISIBILITY
-================================ */
-.dropdown-content {
-  display: none;
-}
-
-.dropdown-content.show {
-  display: block;
-}
-.dropdown-content {
-  display: none;
-}
-
-.dropdown-content.show {
-  display: block;
+  #searchInput {
+    width: 90%;
+  }
 }
