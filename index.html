@@ -5,10 +5,64 @@
   <title>Student Research Journal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* SUBJECT ICON SECTION */
+    .subjects {
+      background: #121212;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .subjects h2 {
+      color: #ffffff;
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .subject-card {
+      text-decoration: none;
+      color: #ffffff;
+      transition: transform 0.25s ease;
+    }
+
+    .subject-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .icon-circle {
+      width: 130px;
+      height: 130px;
+      background: #e11d48; /* CHANGE THIS to your palette */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+    }
+
+    .icon-circle img {
+      width: 60px;
+      height: 60px;
+      filter: invert(1);
+    }
+
+    .subject-card p {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  </style>
 </head>
 
 <body>
-
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -47,19 +101,51 @@
     An open-access platform publishing student research papers
     and academic notes across multiple disciplines.
   </p>
-<img src="images/IMG_0344.jpeg" class="hero-img" alt="Students studying">
+  <img src="images/IMG_0344.jpeg" class="hero-img" alt="Students studying">
 </header>
 
-<!-- SUBJECTS -->
+<!-- SUBJECT ICONS (NEW) -->
 <section class="subjects">
-  <a href="physics.html" class="subject-card">
-    <img src="images/physics.jpg" alt="Physics">
-    <span>Physics</span>
-  </a>
-  <a href="economics.html" class="subject-card">
-    <img src="images/economics.jpg" alt="Economics">
-    <span>Economics</span>
-  </a>
+  <h2>Resources by Subject</h2>
+
+  <div class="subject-grid">
+
+    <a href="physics.html" class="subject-card">
+      <div class="icon-circle">
+        <img src="icons/physics.svg" alt="Physics">
+      </div>
+      <p>Physics</p>
+    </a>
+
+    <a href="economics.html" class="subject-card">
+      <div class="icon-circle">
+        <img src="icons/economics.svg" alt="Economics">
+      </div>
+      <p>Economics</p>
+    </a>
+
+    <a href="maths.html" class="subject-card">
+      <div class="icon-circle">
+        <img src="icons/maths.svg" alt="Maths">
+      </div>
+      <p>Maths</p>
+    </a>
+
+    <a href="chemistry.html" class="subject-card">
+      <div class="icon-circle">
+        <img src="icons/chemistry.svg" alt="Chemistry">
+      </div>
+      <p>Chemistry</p>
+    </a>
+
+    <a href="biology.html" class="subject-card">
+      <div class="icon-circle">
+        <img src="icons/biology.svg" alt="Biology">
+      </div>
+      <p>Biology</p>
+    </a>
+
+  </div>
 </section>
 
 <!-- WHY IT WORKS -->
@@ -102,9 +188,8 @@
   </p>
 </section>
 
-<!-- FEATURED PAPERS (FIXED) -->
+<!-- FEATURED PAPERS -->
 <section class="content-grid">
-
   <a href="#" class="content-card">
     <h3>Inflation Trends in Pakistan</h3>
     <p>Economics · Research Paper</p>
@@ -122,7 +207,6 @@
     <p>Mathematics · Notes</p>
     <p>By Student Author</p>
   </a>
-
 </section>
 
 <!-- FOOTER -->
