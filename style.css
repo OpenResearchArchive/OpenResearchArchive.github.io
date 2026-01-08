@@ -115,6 +115,59 @@ body {
   margin: auto;
 }
 
+/* ================= HERO IMAGE ================= */
+.hero-img {
+  max-width: 900px;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 30px auto 0;
+  display: block;
+}
+
+/* ================= SUBJECTS ================= */
+.subjects {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.subjects h2 {
+  color: var(--maroon);
+  margin-bottom: 45px;
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 45px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.subject-card {
+  text-decoration: none;
+  color: var(--maroon);
+}
+
+.icon-circle {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, var(--maroon), #520c19);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  margin: auto;
+  box-shadow: 0 12px 28px rgba(107,16,32,0.4);
+}
+
+.subject-card p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 /* ================= WHY IT WORKS ================= */
 .why-it-works {
   background: linear-gradient(135deg, var(--black), var(--maroon));
@@ -239,5 +292,15 @@ body {
 
   #searchInput {
     width: 90%;
+  }
+
+  .hero-img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-img {
+    height: 160px;
   }
 }
