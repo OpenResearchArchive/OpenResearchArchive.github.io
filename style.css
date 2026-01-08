@@ -467,3 +467,8 @@ body {
     transform: translateY(0);
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  .icon-circle {
+    animation: none;
+  }
+}
