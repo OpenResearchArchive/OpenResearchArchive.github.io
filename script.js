@@ -40,3 +40,39 @@ if (exploreBtn && exploreMenu) {
     }
   });
 }
+/* ===============================
+   EXPLORE DROPDOWN
+================================ */
+const exploreBtn = document.getElementById("exploreBtn");
+const exploreMenu = document.getElementById("exploreMenu");
+
+exploreBtn.addEventListener("click", function (e) {
+  e.stopPropagation(); // prevent page click closing instantly
+  exploreMenu.classList.toggle("show");
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function () {
+  exploreMenu.classList.remove("show");
+});
+
+
+/* ===============================
+   SEARCH FUNCTIONALITY
+================================ */
+const searchInput = document.getElementById("searchInput");
+const contentCards = document.querySelectorAll(".content-card");
+
+searchInput.addEventListener("keyup", function () {
+  const query = searchInput.value.toLowerCase();
+
+  contentCards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+
+    if (text.includes(query)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
