@@ -336,3 +336,13 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
+/* ===============================
+   DROPDOWN VISIBILITY
+================================ */
+.dropdown-content {
+  display: none;
+}
+
+.dropdown-content.show {
+  display: block;
+}
