@@ -6,10 +6,15 @@
 }
 
 /* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Georgia, serif;
   background: #f5f6f8;
+  color: #111;
 }
 
 /* ================= NAVBAR ================= */
@@ -20,6 +25,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .logo {
@@ -48,6 +54,10 @@ body {
   text-decoration: none;
 }
 
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
 /* ================= DROPDOWN ================= */
 .dropdown {
   position: relative;
@@ -58,6 +68,7 @@ body {
   border: none;
   color: white;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .dropdown-content {
@@ -70,6 +81,7 @@ body {
   border-radius: 10px;
   display: none;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  z-index: 1000;
 }
 
 .dropdown-content.show {
@@ -79,18 +91,86 @@ body {
 .dropdown-content a {
   display: block;
   text-decoration: none;
-  color: black;
+  color: #111;
   padding: 4px 0;
+}
+
+.dropdown-content strong {
+  color: var(--maroon);
 }
 
 /* ================= HERO ================= */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 20px;
 }
 
 .hero h1 {
   color: var(--maroon);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ================= WHY IT WORKS ================= */
+.why-it-works {
+  background: linear-gradient(135deg, var(--black), var(--maroon));
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.why-it-works h2 {
+  margin-bottom: 50px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.why-card {
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.why-number {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.why-subtitle {
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.quote {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ================= ABOUT ================= */
+.about-section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-section p {
+  max-width: 750px;
+  margin: auto;
+  line-height: 1.7;
 }
 
 /* ================= CONTENT ================= */
@@ -106,6 +186,13 @@ body {
   padding: 20px;
   border-radius: 12px;
   border: 1px solid #ddd;
+  text-decoration: none;
+  color: #111;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 /* ================= FOOTER ================= */
@@ -114,6 +201,7 @@ body {
   color: white;
   text-align: center;
   padding: 15px;
+  font-size: 13px;
 }
 
 /* ================= HAMBURGER ================= */
@@ -146,29 +234,10 @@ body {
   }
 
   .nav-right.show {
-    display: flex !important;
+    display: flex;
   }
 
   #searchInput {
     width: 90%;
   }
 }
-@media (max-width: 700px) {
-  .hamburger {
-    display: block;
-  }
-
-  .nav-right {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: linear-gradient(180deg, var(--black), var(--maroon));
-    padding: 15px 0;
-  }
-
-  .nav-right.show {
-    display: flex;
-  }
-
-  #searchInput {
-    width: 90%;
