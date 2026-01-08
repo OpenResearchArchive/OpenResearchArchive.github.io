@@ -37,17 +37,10 @@ body {
 .nav-right {
   display: flex;
   gap: 15px;
-  height: 100%;
-}
-
-/* Force ALL navbar items to align */
-.nav-right > * {
-  display: flex;
   align-items: center;
-  height: 100%;
 }
 
-/* Search */
+/* Search bar */
 #searchInput {
   height: 36px;
   padding: 0 10px;
@@ -55,7 +48,7 @@ body {
   border: none;
 }
 
-/* Submit button (navbar) */
+/* ================= BUTTONS ================= */
 .submit-btn {
   height: 36px;
   padding: 0 14px;
@@ -74,6 +67,8 @@ body {
 /* ================= DROPDOWN ================= */
 .dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 #exploreBtn {
@@ -292,7 +287,7 @@ body {
   font-size: 13px;
 }
 
-/* ================= MOBILE ================= */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
   .hero-img {
     height: 200px;
