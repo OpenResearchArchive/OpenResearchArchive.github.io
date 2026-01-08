@@ -308,3 +308,8 @@ body {
   display: inline-block;
   margin-bottom: 25px;
 }
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+}
