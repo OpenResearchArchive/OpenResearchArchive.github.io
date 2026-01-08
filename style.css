@@ -316,3 +316,22 @@ body {
 #searchInput {
   height: 36px;
 }
+/* ================= SUBMIT PAGE BUTTON ================= */
+.submit-form-wrapper {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.submit-form-btn {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.submit-form-btn:hover {
+  opacity: 0.9;
+}
