@@ -13,10 +13,17 @@
 <nav class="navbar">
   <div class="logo">Student Research Journal</div>
 
-  <a class="submit-btn" href="index.html">Back to Home</a>
+  <div class="hamburger" id="hamburger">☰</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="physics.html">Physics</a></li>
+    <li><a href="economics.html">Economics</a></li>
+    <li><a href="submit.html" class="active">Submit</a></li>
+  </ul>
 </nav>
 
-<!-- ================= SUBMISSION PAGE ================= -->
+<!-- ================= SUBMISSION INTRO ================= -->
 <section class="about-section">
   <h1>Submit an Article</h1>
 
@@ -64,7 +71,7 @@
 
 </section>
 
-<!-- ================= SUBMIT BUTTON ================= -->
+<!-- ================= SUBMIT CTA ================= -->
 <section class="about-section">
   <h2>Submit Your Work</h2>
 
@@ -73,7 +80,7 @@
   </p>
 
   <a
-href="https://forms.gle/EMnwzkCFHX4vfhfD9"
+    href="https://forms.gle/EMnwzkCFHX4vfhfD9"
     class="submit-btn"
     target="_blank"
     style="font-size: 18px; padding: 12px 22px;"
@@ -89,10 +96,11 @@ href="https://forms.gle/EMnwzkCFHX4vfhfD9"
 
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  <div class="footer-bottom">
-    © 2026 Student Research Journal · Open Access
-  </div>
+  © 2026 Student Research Journal · Open Access
 </footer>
+
+<!-- ================= SCRIPT ================= -->
+<script src="script.js"></script>
 
 </body>
 </html>
