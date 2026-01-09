@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // ===== HAMBURGER =====
-  const hamburger = document.getElementById("hamburgerBtn");
-  const navMenu = document.getElementById("navMenu");
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
 
-  if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-      navMenu.classList.toggle("show");
-      console.log("Hamburger clicked"); // DEBUG
-    });
-  }
+  if (!hamburger || !navLinks) return;
 
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+});
   // ===== EXPLORE DROPDOWN =====
   const exploreBtn = document.getElementById("exploreBtn");
   const exploreMenu = document.getElementById("exploreMenu");
