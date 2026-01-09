@@ -281,3 +281,36 @@ body {
   color: #7a1f2b;
   font-weight: bold;
 }
+.stands-for {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+.stands-for h2 {
+  font-size: 1.8rem;
+  color: #7a1f2b; /* maroon */
+  margin-bottom: 1.5rem;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.9rem;
+  font-size: 1.05rem;
+  color: #111;
+}
+
+.checklist li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #7a1f2b;
+  font-weight: bold;
+}
