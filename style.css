@@ -247,50 +247,21 @@ body {
   line-height: 1.7;
   font-size: 16px;
 }
-.journal-checklist {
-  background: #0e0e0e; /* black */
+.checklist-section {
+  background: linear-gradient(135deg, #2a0d13, #7a1f2b);
+  padding: 4rem 1.5rem;
+}
+
+.checklist-container {
+  max-width: 900px;
+  margin: auto;
   color: #ffffff;
-  padding: 3rem 2rem;
-  max-width: 900px;
-  margin: 3rem auto;
-  border-left: 5px solid #7a1f2b; /* maroon accent */
 }
 
-.journal-checklist h2 {
-  color: #7a1f2b;
+.checklist-container h2 {
+  font-size: 2rem;
   margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-}
-
-.journal-checklist ul {
-  list-style: none;
-  padding: 0;
-}
-
-.journal-checklist li {
-  font-size: 1.05rem;
-  margin-bottom: 0.9rem;
-  padding-left: 1.8rem;
-  position: relative;
-}
-
-.journal-checklist li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #7a1f2b;
-  font-weight: bold;
-}
-.stands-for {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 2rem;
-}
-
-.stands-for h2 {
-  font-size: 1.8rem;
-  color: #7a1f2b; /* maroon */
-  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .checklist {
@@ -301,16 +272,15 @@ body {
 .checklist li {
   position: relative;
   padding-left: 2rem;
-  margin-bottom: 0.9rem;
-  font-size: 1.05rem;
-  color: #111;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .checklist li::before {
   content: "✔";
   position: absolute;
   left: 0;
-  top: 0;
-  color: #7a1f2b;
+  color: #ffd6dc; /* soft pink-white */
   font-weight: bold;
 }
