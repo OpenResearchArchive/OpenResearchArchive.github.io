@@ -301,7 +301,13 @@ body {
 .checklist li {
   opacity: 0;
   transform: translateY(10px);
-  animation: reveal 0.5s ease forwards;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.show .checklist li {
+  opacity: 1;
+  transform: translateY(0);
+}
 }
 
 .checklist li:nth-child(1) { animation-delay: 0.1s; }
