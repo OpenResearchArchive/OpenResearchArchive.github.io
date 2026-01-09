@@ -30,7 +30,6 @@ body {
   z-index: 1000;
 }
 
-/* Logo */
 .logo {
   color: white;
   font-weight: bold;
@@ -93,47 +92,17 @@ body {
   padding: 40px 20px;
 }
 
-/* HERO IMAGE */
 .hero-img {
   width: 100%;
   max-width: 1000px;
-  height: 280px;            /* 👈 THIS is the key */
-  object-fit: cover;       /* crop instead of stretch */
+  height: 280px;
+  object-fit: cover;
   border-radius: 16px;
   margin: 30px auto 0;
   display: block;
 }
-/* ================= CONTENT GRID ================= */
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
 
-.content-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  text-decoration: none;
-  color: #111;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.content-card h3 {
-  color: var(--maroon);
-  margin-bottom: 6px;
-}
-
-.content-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-}
-
-/* ================= SUBJECT GRID (HOME PAGE) ================= */
+/* ================= SUBJECT GRID ================= */
 .subjects {
   padding: 70px 20px;
   text-align: center;
@@ -155,6 +124,11 @@ body {
 .subject-card {
   text-decoration: none;
   color: var(--maroon);
+  transition: transform 0.25s ease;
+}
+
+.subject-card:hover {
+  transform: translateY(-6px);
 }
 
 .icon-circle {
@@ -168,6 +142,11 @@ body {
   font-size: 36px;
   margin: auto;
   box-shadow: 0 12px 28px rgba(107,16,32,0.4);
+  transition: box-shadow 0.25s ease;
+}
+
+.subject-card:hover .icon-circle {
+  box-shadow: 0 18px 36px rgba(107,16,32,0.45);
 }
 
 .subject-card p {
@@ -176,15 +155,6 @@ body {
   margin-top: 10px;
 }
 
-/* ================= FOOTER ================= */
-.site-footer {
-  background: var(--black);
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 13px;
-  margin-top: 40px;
-}
 /* ================= WHY IT WORKS ================= */
 .why-it-works {
   background: linear-gradient(135deg, var(--black), var(--maroon));
@@ -212,89 +182,6 @@ body {
   border-radius: 16px;
 }
 
-.why-number {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.why-subtitle {
-  font-style: italic;
-  opacity: 0.85;
-}
-
-.quote {
-  display: block;
-  margin-top: 15px;
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-/* ================= ABOUT ================= */
-.about-section {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.about-section h2 {
-  color: var(--maroon);
-  margin-bottom: 20px;
-}
-
-.about-section p {
-  line-height: 1.7;
-  font-size: 16px;
-}
-.checklist-section {
-  background: linear-gradient(135deg, #2a0d13, #7a1f2b);
-  padding: 4rem 1.5rem;
-}
-
-.checklist-container {
-  max-width: 900px;
-  margin: auto;
-  color: #ffffff;
-}
-
-.checklist-container h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.checklist {
-  list-style: none;
-  padding: 0;
-}
-
-.checklist li {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.checklist li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #ffd6dc; /* soft pink-white */
-  font-weight: bold;
-}
-/* ===== FADE IN ON SCROLL ===== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(25px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 /* ================= CHECKLIST ================= */
 .checklist-section {
   background: linear-gradient(135deg, var(--black), var(--maroon));
@@ -339,15 +226,86 @@ body {
   font-weight: bold;
 }
 
-/* Reveal checklist items when section is visible */
 .fade-in.show .checklist li {
   opacity: 1;
   transform: translateY(0);
 }
 
-@keyframes reveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* ================= CONTENT GRID ================= */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #111;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.content-card h3 {
+  color: var(--maroon);
+  margin-bottom: 6px;
+}
+
+/* ================= ABOUT ================= */
+.about-section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  color: var(--maroon);
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: var(--black);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  margin-top: 40px;
+}
+
+/* ================= FADE-IN SYSTEM ================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }
+  
