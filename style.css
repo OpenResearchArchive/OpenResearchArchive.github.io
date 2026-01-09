@@ -83,7 +83,13 @@ body {
   margin: 30px auto 0;
   display: block;
 }
-
+@media (max-width: 600px) {
+  .hero-img {
+    height: auto;
+    object-fit: contain;
+    background: #6b1020; /* fallback color */
+  }
+}
 /* ================= WHAT THIS JOURNAL STANDS FOR (CHECKLIST) ================= */
 .checklist-section {
   background: linear-gradient(135deg, var(--black), var(--maroon));
