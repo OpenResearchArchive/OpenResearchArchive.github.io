@@ -304,3 +304,7 @@ body {
     transition: none !important;
   }
 }
+.page-content {
+  padding-top: 40px;
+  width: 100%;
+}
