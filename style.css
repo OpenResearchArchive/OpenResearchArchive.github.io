@@ -312,3 +312,22 @@ body {
 main {
   flex: 1;
 }
+/* ================= PAGE HEADERS ================= */
+.page-header {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  color: var(--maroon);
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+
+.page-header p {
+  font-size: 15px;
+  color: #444;
+}
